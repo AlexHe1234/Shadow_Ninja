@@ -1,0 +1,2 @@
+mode: llm
+rs_config: !config lib/config/rs_config/llm.yaml

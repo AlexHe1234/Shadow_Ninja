@@ -1,0 +1,902 @@
+[
+    {
+        "name": "Introduction to Psychology",
+        "comments": [
+            {"positive": "Engaging discussions on the intricacies of human behavior enhance understanding."},
+            {"negative": "Overlapping content in lectures and readings can lead to redundancy."},
+            {"positive": "Practical applications of psychological theories enrich the learning experience."},
+            {"negative": "Limited practical applications may hinder the understanding of theoretical concepts."},
+            {"positive": "Diverse perspectives in lectures foster critical thinking among students."},
+            {"negative": "Some topics lack depth, leaving students craving more comprehensive exploration."},
+            {"positive": "Interactive experiments provide hands-on experience in psychological research methods."},
+            {"negative": "Assessments heavily rely on memorization rather than critical analysis."},
+            {"positive": "Guest lectures from practicing psychologists offer real-world insights into the field."},
+            {"negative": "The course workload can be overwhelming, especially when combined with other courses."}
+        ]
+    },
+    {
+        "name": "Data Structures and Algorithms",
+        "comments": [
+            {"positive": "Practical coding assignments reinforce theoretical concepts, enhancing learning outcomes."},
+            {"negative": "The pace of the course may be too fast for some students, leading to difficulty in keeping up."},
+            {"positive": "In-depth discussions on algorithmic efficiency foster analytical problem-solving skills."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Guest lectures from industry professionals offer valuable insights into real-world applications."},
+            {"negative": "Complex mathematical concepts underlying algorithms may be daunting for students without a strong mathematical background."},
+            {"positive": "Abundant resources, including online tutorials and coding platforms, support self-paced learning."},
+            {"negative": "The grading criteria for assignments and exams may seem ambiguous at times."},
+            {"positive": "Collaborative group projects encourage teamwork and peer learning."},
+            {"negative": "Insufficient time allocated for coding assignments may result in rushed submissions and lower-quality work."}
+        ]
+    },
+    {
+        "name": "Cellular Biology",
+        "comments": [
+            {"positive": "Hands-on laboratory experiments provide practical experience in cellular research techniques."},
+            {"negative": "The course material may be overwhelming, especially for students new to biology."},
+            {"positive": "In-depth discussions on cellular processes enhance understanding of complex biological mechanisms."},
+            {"negative": "Complex biochemical pathways and molecular interactions may be difficult to grasp."},
+            {"positive": "Guest lectures from leading researchers in the field offer valuable insights into current advancements."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Accessible resources such as online databases and research articles facilitate independent study."},
+            {"negative": "Insufficient time allocated for laboratory sessions may hinder thorough experimentation."},
+            {"positive": "Interactive demonstrations and visual aids aid in conceptual comprehension."},
+            {"negative": "Certain concepts may be oversimplified, lacking in-depth exploration."}
+        ]
+    },
+    {
+        "name": "Shakespearean Literature",
+        "comments": [
+            {"positive": "Immersive discussions on classic literary works foster a deep appreciation for Shakespeare's genius."},
+            {"negative": "The archaic language and complex themes may pose challenges for modern learners."},
+            {"positive": "In-depth analysis of characters and themes enriches understanding of the texts."},
+            {"negative": "Certain plays may feel outdated or irrelevant to contemporary audiences."},
+            {"positive": "Engaging lectures bring the works of Shakespeare to life with historical context and cultural insights."},
+            {"negative": "Interpretation of ambiguous passages may vary, leading to confusion."},
+            {"positive": "Exploration of universal themes resonates with audiences across different cultures and time periods."},
+            {"negative": "The sheer volume of readings may overwhelm students, leaving little time for deeper analysis."},
+            {"positive": "Interactive discussions and group activities encourage active participation and critical thinking."},
+            {"negative": "Scheduling conflicts with other courses or extracurricular activities may disrupt the continuity of discussions."}
+        ]
+    },
+    {
+        "name": "Introduction to Thermodynamics",
+        "comments": [
+            {"positive": "Thorough explanations of thermodynamic principles provide a solid foundation for future study."},
+            {"negative": "The abstract nature of thermodynamic concepts can be difficult to grasp initially."},
+            {"positive": "Real-world examples and applications help illustrate theoretical concepts."},
+            {"negative": "Theoretical concepts may seem disconnected from practical engineering applications."},
+            {"positive": "Hands-on experiments and demonstrations enhance understanding of thermodynamic processes."},
+            {"negative": "Complex mathematical calculations may overwhelm students with weaker math backgrounds."},
+            {"positive": "Interactive simulations allow students to explore thermodynamic phenomena in a virtual environment."},
+            {"negative": "Insufficient time allocated for lab sessions may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on the implications of thermodynamics in various engineering fields inspire critical thinking."},
+            {"negative": "The pace of the course may feel rushed, leaving little time for in-depth exploration of complex topics."}
+        ]
+    },
+    {
+        "name": "Principles of Macroeconomics",
+        "comments": [
+            {"positive": "Insightful discussions on economic theories and policies provide a comprehensive understanding of macroeconomic principles."},
+            {"negative": "Theoretical frameworks presented may feel disconnected from real-world economic dynamics."},
+            {"positive": "Application-based learning activities deepen comprehension of economic concepts."},
+            {"negative": "The course workload may be overwhelming, especially when combined with other courses."},
+            {"positive": "Guest lectures from economists and policymakers offer valuable perspectives on contemporary economic issues."},
+            {"negative": "Certain economic models may oversimplify complex real-world phenomena."},
+            {"positive": "Interactive simulations allow students to explore the impact of policy decisions on economic outcomes."},
+            {"negative": "The pace of the course may be too fast for some students to fully absorb the material."},
+            {"positive": "Case studies provide real-world examples that contextualize theoretical concepts."},
+            {"negative": "Limited opportunities for practical application may hinder the development of critical thinking skills."}
+        ]
+    },
+    {
+        "name": "International Relations Theory",
+        "comments": [
+            {"positive": "In-depth analysis of international relations theories fosters critical thinking and analytical skills."},
+            {"negative": "The sheer breadth of theoretical frameworks covered can sometimes blur the focus."},
+            {"positive": "Engaging discussions on global politics provide valuable insights into contemporary international issues."},
+            {"negative": "Certain theories may seem outdated or irrelevant in today's rapidly changing world."},
+            {"positive": "Guest lectures from diplomats and scholars offer diverse perspectives on international relations."},
+            {"negative": "Complex geopolitical concepts may be challenging to grasp without sufficient background knowledge."},
+            {"positive": "Interactive debates and simulations encourage active participation and exploration of diverse viewpoints."},
+            {"negative": "The course workload may be overwhelming, leaving little time for deeper analysis."},
+            {"positive": "Application-based assignments allow students to apply theoretical frameworks to real-world scenarios."},
+            {"negative": "Limited opportunities for practical experience in diplomacy or international negotiations may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Circuits and Systems",
+        "comments": [
+            {"positive": "Hands-on lab sessions provide practical experience in designing and analyzing electronic circuits."},
+            {"negative": "The pace of the course may be too fast for some students, leading to difficulty in keeping up."},
+            {"positive": "Thorough explanations of circuit theory enhance understanding of complex electrical systems."},
+            {"negative": "Certain mathematical concepts underlying circuit analysis may be challenging for students."},
+            {"positive": "Real-world examples and applications help illustrate theoretical concepts."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Interactive simulations allow students to explore circuit behaviors in a virtual environment."},
+            {"negative": "Insufficient time allocated for lab sessions may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on emerging technologies inspire critical thinking and innovation."},
+            {"negative": "Technical issues with equipment or software may disrupt lab sessions."}
+        ]
+    },
+    {
+        "name": "Environmental Sustainability",
+        "comments": [
+            {"positive": "Comprehensive discussions on environmental issues foster awareness and promote sustainable practices."},
+            {"negative": "The course material may be overwhelming, especially for students new to environmental science."},
+            {"positive": "Guest lectures from environmental experts offer valuable insights into current sustainability challenges."},
+            {"negative": "Complex scientific concepts may be difficult to grasp without a strong background in science."},
+            {"positive": "Field trips and outdoor activities provide firsthand experience with environmental issues."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Interactive discussions on sustainable solutions encourage critical thinking and problem-solving."},
+            {"negative": "The course workload may be overwhelming, leaving little time for exploration of supplementary materials."},
+            {"positive": "Collaborative projects promote teamwork and peer learning."},
+            {"negative": "Scheduling conflicts with field trips or outdoor activities may disrupt the continuity of the course."}
+        ]
+    },
+    {
+        "name": "World History: Renaissance to Present",
+        "comments": [
+            {"positive": "Thorough exploration of historical events and movements provides a comprehensive understanding of world history."},
+            {"negative": "The sheer volume of historical information may be overwhelming for some students."},
+            {"positive": "Engaging lectures bring historical figures and events to life with vivid storytelling."},
+            {"negative": "Certain historical periods or events may receive disproportionate focus, neglecting others."},
+            {"positive": "In-depth analysis of primary sources offers valuable insights into historical perspectives."},
+            {"negative": "Interpretation of historical events may vary, leading to conflicting viewpoints."},
+            {"positive": "Interactive discussions encourage critical thinking and exploration of diverse historical narratives."},
+            {"negative": "The pace of the course may be too fast for some students to fully absorb the material."},
+            {"positive": "Application-based assignments allow students to apply historical concepts to contemporary issues."},
+            {"negative": "Limited opportunities for practical experience in historical research may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Introduction to Business Management",
+        "comments": [
+            {"positive": "Insightful discussions on management principles provide a solid foundation for aspiring business leaders."},
+            {"negative": "Theoretical concepts may feel disconnected from real-world business practices."},
+            {"positive": "Case studies and real-life examples illustrate management concepts in practical contexts."},
+            {"negative": "Certain management theories may seem outdated or irrelevant in today's rapidly changing business environment."},
+            {"positive": "Guest lectures from industry professionals offer valuable insights into contemporary business challenges."},
+            {"negative": "The course workload may be overwhelming, especially when combined with other business courses."},
+            {"positive": "Interactive group projects foster teamwork and collaboration skills."},
+            {"negative": "The grading criteria for assignments and exams may seem ambiguous at times."},
+            {"positive": "Application-based learning activities allow students to apply management theories to real-world scenarios."},
+            {"negative": "Limited opportunities for practical experience in management may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Quantum Mechanics",
+        "comments": [
+            {"positive": "Thorough explanations of quantum principles provide a deep understanding of fundamental physics."},
+            {"negative": "The abstract nature of quantum concepts can be challenging to grasp initially."},
+            {"positive": "Real-world applications of quantum mechanics demonstrate its relevance in modern technology."},
+            {"negative": "Theoretical concepts may seem disconnected from practical engineering applications."},
+            {"positive": "Hands-on laboratory experiments offer firsthand experience with quantum phenomena."},
+            {"negative": "Complex mathematical calculations may overwhelm students with weaker math backgrounds."},
+            {"positive": "Interactive simulations allow students to explore quantum behaviors in a virtual environment."},
+            {"negative": "Insufficient time allocated for lab sessions may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on the implications of quantum mechanics inspire critical thinking."},
+            {"negative": "The pace of the course may feel rushed, leaving little time for in-depth exploration of complex topics."}
+        ]
+    },
+    {
+        "name": "Sociological Theory",
+        "comments": [
+            {"positive": "In-depth analysis of sociological theories fosters critical thinking and analytical skills."},
+            {"negative": "The sheer breadth of theoretical frameworks covered can sometimes blur the focus."},
+            {"positive": "Engaging discussions on social issues provide valuable insights into contemporary societal challenges."},
+            {"negative": "Certain theories may seem outdated or irrelevant in today's rapidly changing society."},
+            {"positive": "Guest lectures from sociologists offer diverse perspectives on social phenomena."},
+            {"negative": "Complex sociological concepts may be challenging to grasp without sufficient background knowledge."},
+            {"positive": "Interactive debates and simulations encourage active participation and exploration of diverse viewpoints."},
+            {"negative": "The course workload may be overwhelming, leaving little time for deeper analysis."},
+            {"positive": "Application-based assignments allow students to apply theoretical frameworks to real-world scenarios."},
+            {"negative": "Limited opportunities for practical experience in sociological research may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Organic Chemistry",
+        "comments": [
+            {"positive": "Hands-on laboratory experiments provide practical experience in organic synthesis techniques."},
+            {"negative": "The course material may be overwhelming, especially for students new to organic chemistry."},
+            {"positive": "In-depth discussions on organic reactions enhance understanding of chemical mechanisms."},
+            {"negative": "Complex reaction mechanisms and stereochemistry may be difficult to grasp."},
+            {"positive": "Guest lectures from organic chemists offer valuable insights into current advancements."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Accessible resources such as online databases and research articles facilitate independent study."},
+            {"negative": "Insufficient time allocated for laboratory sessions may hinder thorough experimentation."},
+            {"positive": "Interactive demonstrations and visual aids aid in conceptual comprehension."},
+            {"negative": "Certain concepts may be oversimplified, lacking in-depth exploration."}
+        ]
+    },
+    {
+        "name": "Public Speaking",
+        "comments": [
+            {"positive": "Engaging lectures on public speaking techniques enhance communication skills."},
+            {"negative": "The fear of public speaking may hinder some students' participation."},
+            {"positive": "Practical exercises and speech rehearsals build confidence in public speaking."},
+            {"negative": "Certain speaking assignments may feel repetitive or uninspiring."},
+            {"positive": "Guest speakers from various fields offer valuable insights into effective communication strategies."},
+            {"negative": "Technical issues with audiovisual equipment may disrupt presentations."},
+            {"positive": "Constructive feedback from peers and instructors promotes continuous improvement."},
+            {"negative": "The grading criteria for speeches may seem subjective."},
+            {"positive": "Interactive workshops provide opportunities for hands-on practice."},
+            {"negative": "Limited time for individualized coaching may leave some students feeling unsupported."}
+        ]
+    },
+    {
+        "name": "Calculus I",
+        "comments": [
+            {"positive": "Thorough explanations of calculus principles provide a solid foundation for future mathematical study."},
+            {"negative": "The pace of the course may be too fast for some students, leading to difficulty in keeping up."},
+            {"positive": "Real-world applications of calculus demonstrate its relevance in various scientific fields."},
+            {"negative": "Complex mathematical concepts may be challenging to grasp without a strong mathematical background."},
+            {"positive": "Hands-on problem-solving exercises enhance understanding of calculus concepts."},
+            {"negative": "Certain topics, such as limits and derivatives, may require additional clarification."},
+            {"positive": "Interactive tutorials and practice problems support self-paced learning."},
+            {"negative": "The grading criteria for assignments and exams may seem stringent."},
+            {"positive": "Engaging discussions on the historical development of calculus inspire critical thinking."},
+            {"negative": "Insufficient time allocated for individualized assistance may hinder student progress."}
+        ]
+    },
+    {
+        "name": "Renaissance Art and Culture",
+        "comments": [
+            {"positive": "Immersive discussions on Renaissance art and culture foster a deep appreciation for historical creativity."},
+            {"negative": "The sheer volume of artworks and historical contexts may be overwhelming for some students."},
+            {"positive": "In-depth analysis of artistic techniques and styles enriches understanding of Renaissance masterpieces."},
+            {"negative": "Certain artworks may seem outdated or irrelevant to contemporary audiences."},
+            {"positive": "Engaging lectures bring the works of Renaissance artists to life with vivid storytelling."},
+            {"negative": "Interpretation of ambiguous artworks may vary, leading to conflicting viewpoints."},
+            {"positive": "Exploration of cultural movements and societal contexts provides valuable insights into Renaissance society."},
+            {"negative": "The pace of the course may be too fast for some students to fully absorb the material."},
+            {"positive": "Interactive discussions and group activities encourage active participation and critical thinking."},
+            {"negative": "Scheduling conflicts with other courses or extracurricular activities may disrupt the continuity of discussions."}
+        ]
+    },
+    {
+        "name": "Nursing Fundamentals",
+        "comments": [
+            {"positive": "Comprehensive discussions on nursing fundamentals provide a solid foundation for future nursing practice."},
+            {"negative": "The course workload may be overwhelming, especially when combined with clinical rotations."},
+            {"positive": "Hands-on clinical experiences offer invaluable opportunities for skill development."},
+            {"negative": "Certain nursing procedures may be daunting for students without prior healthcare experience."},
+            {"positive": "Guest lectures from experienced nurses offer practical insights into nursing practice."},
+            {"negative": "Limited emphasis on practical applications in real-world healthcare settings may leave some students feeling unprepared."},
+            {"positive": "Interactive simulations allow students to practice clinical scenarios in a controlled environment."},
+            {"negative": "Insufficient time allocated for clinical rotations may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on ethical dilemmas in nursing foster critical thinking."},
+            {"negative": "Scheduling conflicts with clinical placements or lectures may disrupt the continuity of the course."}
+        ]
+    },
+    {
+        "name": "Computer Networks",
+        "comments": [
+            {"positive": "Hands-on lab sessions provide practical experience in designing and configuring computer networks."},
+            {"negative": "The pace of the course may be too fast for some students, leading to difficulty in keeping up."},
+            {"positive": "Thorough explanations of networking concepts enhance understanding of complex systems."},
+            {"negative": "Certain technical concepts may be challenging to grasp without prior experience in networking."},
+            {"positive": "Real-world examples and applications help illustrate theoretical concepts."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Interactive simulations allow students to explore network behaviors in a virtual environment."},
+            {"negative": "Insufficient time allocated for lab sessions may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on emerging technologies inspire critical thinking and innovation."},
+            {"negative": "Technical issues with equipment or software may disrupt lab sessions."}
+        ]
+    },
+    {
+        "name": "Introduction to Linguistics",
+        "comments": [
+            {"positive": "Insightful discussions on linguistic theories provide a comprehensive understanding of language structure and function."},
+            {"negative": "The sheer breadth of linguistic concepts covered can sometimes blur the focus."},
+            {"positive": "Engaging discussions on language acquisition and development offer valuable insights into human cognition."},
+            {"negative": "Certain theories may seem abstract or disconnected from everyday language use."},
+            {"positive": "Interactive activities and language exercises enhance comprehension of linguistic concepts."},
+            {"negative": "Complex phonological and syntactic rules may be challenging to grasp without sufficient background knowledge."},
+            {"positive": "Exploration of linguistic diversity and cross-cultural communication enriches understanding of global languages."},
+            {"negative": "The course workload may be overwhelming, leaving little time for deeper analysis."},
+            {"positive": "Application-based assignments allow students to apply linguistic theories to real-world language phenomena."},
+            {"negative": "Limited opportunities for practical experience in linguistic research may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Advanced Abnormal Psychology",
+        "comments": [
+            {"positive": "In-depth discussions on abnormal psychological disorders provide valuable insights into mental health issues."},
+            {"negative": "The course material may be emotionally taxing for some students."},
+            {"positive": "Case studies and real-life examples illustrate abnormal behavior in practical contexts."},
+            {"negative": "Certain psychological disorders may be stigmatized or misunderstood."},
+            {"positive": "Guest lectures from clinical psychologists offer firsthand perspectives on diagnosing and treating mental illness."},
+            {"negative": "The course workload may be demanding, especially when combined with other psychology courses."},
+            {"positive": "Interactive group discussions foster empathy and understanding of diverse perspectives."},
+            {"negative": "The grading criteria for assignments and exams may seem subjective at times."},
+            {"positive": "Application-based learning activities allow students to apply psychological theories to real-world case studies."},
+            {"negative": "Limited opportunities for practical experience in clinical settings may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Web Development",
+        "comments": [
+            {"positive": "Practical coding assignments reinforce web development concepts, enhancing learning outcomes."},
+            {"negative": "The pace of the course may be too fast for some students, leading to difficulty in keeping up."},
+            {"positive": "In-depth discussions on front-end and back-end development provide a comprehensive understanding of web technologies."},
+            {"negative": "Limited emphasis on practical applications in real-world projects may leave some students feeling disconnected."},
+            {"positive": "Abundant resources, including online tutorials and coding platforms, support self-paced learning."},
+            {"negative": "Complex programming languages and frameworks may be daunting for beginners."},
+            {"positive": "Interactive coding exercises challenge students to think creatively and solve real-world problems."},
+            {"negative": "Insufficient time allocated for coding assignments may result in rushed submissions and lower-quality work."},
+            {"positive": "Regular code reviews and feedback sessions facilitate continuous improvement."},
+            {"negative": "Technical glitches during online lectures or coding sessions disrupt the learning experience."}
+        ]
+    },
+    {
+        "name": "Genetics",
+        "comments": [
+            {"positive": "Hands-on laboratory experiments provide practical experience in genetic analysis techniques."},
+            {"negative": "The course material may be overwhelming, especially for students new to genetics."},
+            {"positive": "In-depth discussions on genetic principles enhance understanding of inheritance and variation."},
+            {"negative": "Complex genetic concepts may be difficult to grasp without a strong background in biology."},
+            {"positive": "Guest lectures from geneticists offer valuable insights into current advancements."},
+            {"negative": "Limited emphasis on practical applications in real-world research may leave some students feeling disconnected."},
+            {"positive": "Accessible resources such as online databases and research articles facilitate independent study."},
+            {"negative": "Insufficient time allocated for laboratory sessions may hinder thorough experimentation."},
+            {"positive": "Interactive demonstrations and visual aids aid in conceptual comprehension."},
+            {"negative": "Certain concepts may be oversimplified, lacking in-depth exploration."}
+        ]
+    },
+    {
+        "name": "Modern American Literature",
+        "comments": [
+            {"positive": "Immersive discussions on modern American literary works foster a deep appreciation for contemporary literature."},
+            {"negative": "The sheer volume of readings and analyses may be overwhelming for some students."},
+            {"positive": "In-depth analysis of themes and literary techniques enriches understanding of modern literary masterpieces."},
+            {"negative": "Certain literary works may be challenging to interpret due to their complexity."},
+            {"positive": "Engaging lectures bring modern American literature to life with historical context and cultural insights."},
+            {"negative": "Interpretation of ambiguous passages may vary, leading to conflicting viewpoints."},
+            {"positive": "Exploration of social and cultural movements provides valuable insights into modern American society."},
+            {"negative": "The pace of the course may be too fast for some students to fully absorb the material."},
+            {"positive": "Interactive discussions and group activities encourage active participation and critical thinking."},
+            {"negative": "Scheduling conflicts with other courses or extracurricular activities may disrupt the continuity of discussions."}
+        ]
+    },
+    {
+        "name": "Thermodynamics and Heat Transfer",
+        "comments": [
+            {"positive": "Thorough explanations of thermodynamic principles provide a solid foundation for future study in mechanical engineering."},
+            {"negative": "The abstract nature of thermodynamic concepts can be difficult to grasp initially."},
+            {"positive": "Real-world applications of thermodynamics demonstrate its relevance in various engineering fields."},
+            {"negative": "Theoretical concepts may seem disconnected from practical engineering applications."},
+            {"positive": "Hands-on laboratory experiments offer firsthand experience with heat transfer phenomena."},
+            {"negative": "Complex mathematical calculations may overwhelm students with weaker math backgrounds."},
+            {"positive": "Interactive simulations allow students to explore thermodynamic behaviors in a virtual environment."},
+            {"negative": "Insufficient time allocated for lab sessions may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on the implications of thermodynamics inspire critical thinking."},
+            {"negative": "The pace of the course may feel rushed, leaving little time for in-depth exploration of complex topics."}
+        ]
+    },
+    {
+        "name": "Microeconomics",
+        "comments": [
+            {"positive": "Insightful discussions on economic theories and market dynamics provide a comprehensive understanding of microeconomic principles."},
+            {"negative": "Theoretical frameworks presented may feel disconnected from real-world economic dynamics."},
+            {"positive": "Application-based learning activities deepen comprehension of economic concepts."},
+            {"negative": "The course workload may be overwhelming, especially when combined with other economics courses."},
+            {"positive": "Guest lectures from economists and industry experts offer valuable perspectives on contemporary economic issues."},
+            {"negative": "Certain economic models may oversimplify complex real-world phenomena."},
+            {"positive": "Interactive simulations allow students to explore the impact of policy decisions on economic outcomes."},
+            {"negative": "The pace of the course may be too fast for some students to fully absorb the material."},
+            {"positive": "Case studies provide real-world examples that contextualize theoretical concepts."},
+            {"negative": "Limited opportunities for practical application may hinder the development of critical thinking skills."}
+        ]
+    },
+    {
+        "name": "Comparative Politics",
+        "comments": [
+            {"positive": "In-depth analysis of political systems and institutions fosters critical thinking and analytical skills."},
+            {"negative": "The sheer breadth of comparative politics topics covered can sometimes blur the focus."},
+            {"positive": "Engaging discussions on global political trends provide valuable insights into contemporary issues."},
+            {"negative": "Certain political theories may seem outdated or irrelevant in today's rapidly changing world."},
+            {"positive": "Guest lectures from political scientists offer diverse perspectives on comparative politics."},
+            {"negative": "Complex geopolitical concepts may be challenging to grasp without sufficient background knowledge."},
+            {"positive": "Interactive debates and simulations encourage active participation and exploration of diverse viewpoints."},
+            {"negative": "The course workload may be overwhelming, leaving little time for deeper analysis."},
+            {"positive": "Application-based assignments allow students to apply theoretical frameworks to real-world scenarios."},
+            {"negative": "Limited opportunities for practical experience in political research may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Digital Electronics",
+        "comments": [
+            {"positive": "Hands-on lab sessions provide practical experience in designing and analyzing digital circuits."},
+            {"negative": "The pace of the course may be too fast for some students, leading to difficulty in keeping up."},
+            {"positive": "Thorough explanations of digital logic enhance understanding of complex electronic systems."},
+            {"negative": "Certain technical concepts may be challenging to grasp without prior experience in electronics."},
+            {"positive": "Real-world examples and applications help illustrate theoretical concepts."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Interactive simulations allow students to explore digital circuit behaviors in a virtual environment."},
+            {"negative": "Insufficient time allocated for lab sessions may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on emerging technologies inspire critical thinking and innovation."},
+            {"negative": "Technical issues with equipment or software may disrupt lab sessions."}
+        ]
+    },
+    {
+        "name": "Climate Change and Sustainability",
+        "comments": [
+            {"positive": "Comprehensive discussions on climate change foster awareness and promote sustainable practices."},
+            {"negative": "The course material may be overwhelming, especially for students new to environmental science."},
+            {"positive": "Guest lectures from environmental experts offer valuable insights into current sustainability challenges."},
+            {"negative": "Complex scientific concepts may be difficult to grasp without a strong background in science."},
+            {"positive": "Field trips and outdoor activities provide firsthand experience with environmental issues."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Interactive discussions on sustainable solutions encourage critical thinking and problem-solving."},
+            {"negative": "The course workload may be overwhelming, leaving little time for exploration of supplementary materials."},
+            {"positive": "Collaborative projects promote teamwork and peer learning."},
+            {"negative": "Scheduling conflicts with field trips or outdoor activities may disrupt the continuity of the course."}
+        ]
+    },
+    {
+        "name": "Ancient Civilizations",
+        "comments": [
+            {"positive": "Thorough exploration of ancient civilizations provides a comprehensive understanding of historical developments."},
+            {"negative": "The sheer volume of historical information may be overwhelming for some students."},
+            {"positive": "Engaging lectures bring ancient civilizations to life with vivid storytelling."},
+            {"negative": "Certain historical periods or civilizations may receive disproportionate focus, neglecting others."},
+            {"positive": "In-depth analysis of archaeological findings offers valuable insights into ancient cultures."},
+            {"negative": "Interpretation of historical events may vary, leading to conflicting viewpoints."},
+            {"positive": "Interactive discussions encourage critical thinking and exploration of diverse historical narratives."},
+            {"negative": "The pace of the course may be too fast for some students to fully absorb the material."},
+            {"positive": "Application-based assignments allow students to apply historical concepts to contemporary issues."},
+            {"negative": "Limited opportunities for practical experience in historical research may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Marketing Principles",
+        "comments": [
+            {"positive": "Insightful discussions on marketing principles provide a solid foundation for aspiring marketers."},
+            {"negative": "Theoretical concepts may feel disconnected from real-world marketing practices."},
+            {"positive": "Case studies and real-life examples illustrate marketing strategies in practical contexts."},
+            {"negative": "Certain marketing theories may seem outdated or irrelevant in today's rapidly changing market."},
+            {"positive": "Guest lectures from industry professionals offer valuable insights into contemporary marketing challenges."},
+            {"negative": "The course workload may be overwhelming, especially when combined with other business courses."},
+            {"positive": "Interactive group projects foster teamwork and collaboration skills."},
+            {"negative": "The grading criteria for assignments and exams may seem ambiguous at times."},
+            {"positive": "Application-based learning activities allow students to apply marketing theories to real-world scenarios."},
+            {"negative": "Limited opportunities for practical experience in marketing campaigns may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Modern Physics",
+        "comments": [
+            {"positive": "Thorough explanations of modern physics principles provide a deep understanding of fundamental physics."},
+            {"negative": "The abstract nature of modern physics concepts can be challenging to grasp initially."},
+            {"positive": "Real-world applications of modern physics demonstrate its relevance in cutting-edge technologies."},
+            {"negative": "Theoretical concepts may seem disconnected from practical engineering applications."},
+            {"positive": "Hands-on laboratory experiments offer firsthand experience with modern phenomena."},
+            {"negative": "Complex mathematical calculations may overwhelm students with weaker math backgrounds."},
+            {"positive": "Interactive simulations allow students to explore modern physics behaviors in a virtual environment."},
+            {"negative": "Insufficient time allocated for lab sessions may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on the implications of modern physics inspire critical thinking."},
+            {"negative": "The pace of the course may feel rushed, leaving little time for in-depth exploration of complex topics."}
+        ]
+    },
+    {
+        "name": "Social Stratification",
+        "comments": [
+            {"positive": "In-depth analysis of social stratification fosters critical thinking and analytical skills."},
+            {"negative": "The sheer breadth of theoretical frameworks covered can sometimes blur the focus."},
+            {"positive": "Engaging discussions on social inequalities provide valuable insights into contemporary societal challenges."},
+            {"negative": "Certain theories may seem outdated or irrelevant in today's rapidly changing society."},
+            {"positive": "Guest lectures from sociologists offer diverse perspectives on social phenomena."},
+            {"negative": "Complex sociological concepts may be challenging to grasp without sufficient background knowledge."},
+            {"positive": "Interactive debates and simulations encourage active participation and exploration of diverse viewpoints."},
+            {"negative": "The course workload may be overwhelming, leaving little time for deeper analysis."},
+            {"positive": "Application-based assignments allow students to apply theoretical frameworks to real-world scenarios."},
+            {"negative": "Limited opportunities for practical experience in social research may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Analytical Chemistry",
+        "comments": [
+            {"positive": "Hands-on laboratory experiments provide practical experience in analytical techniques."},
+            {"negative": "The course material may be overwhelming, especially for students new to analytical chemistry."},
+            {"positive": "In-depth discussions on analytical methods enhance understanding of chemical analysis."},
+            {"negative": "Complex analytical techniques and instruments may be difficult to grasp."},
+            {"positive": "Guest lectures from analytical chemists offer valuable insights into current advancements."},
+            {"negative": "Limited emphasis on practical applications in real-world scenarios may leave some students feeling disconnected."},
+            {"positive": "Accessible resources such as online databases and research articles facilitate independent study."},
+            {"negative": "Insufficient time allocated for laboratory sessions may hinder thorough experimentation."},
+            {"positive": "Interactive demonstrations and visual aids aid in conceptual comprehension."},
+            {"negative": "Certain concepts may be oversimplified, lacking in-depth exploration."}
+        ]
+    },
+    {
+        "name": "Interpersonal Communication",
+        "comments": [
+            {"positive": "Engaging lectures on interpersonal communication techniques enhance social interaction skills."},
+            {"negative": "Personal anxieties or insecurities may hinder some students' participation in discussions."},
+            {"positive": "Practical exercises and role-playing scenarios build confidence in interpersonal communication."},
+            {"negative": "Certain communication exercises may feel contrived or artificial."},
+            {"positive": "Guest speakers from various fields offer valuable insights into effective communication strategies."},
+            {"negative": "Technical issues with audiovisual equipment may disrupt presentations."},
+            {"positive": "Constructive feedback from peers and instructors promotes continuous improvement."},
+            {"negative": "The grading criteria for communication assignments may seem subjective."},
+            {"positive": "Interactive workshops provide opportunities for hands-on practice."},
+            {"negative": "Limited time for individualized coaching may leave some students feeling unsupported."}
+        ]
+    },
+    {
+        "name": "Linear Algebra",
+        "comments": [
+            {"positive": "Thorough explanations of linear algebra principles provide a solid foundation for future mathematical study."},
+            {"negative": "The pace of the course may be too fast for some students, leading to difficulty in keeping up."},
+            {"positive": "Real-world applications of linear algebra demonstrate its relevance in various scientific fields."},
+            {"negative": "Complex mathematical concepts may be challenging to grasp without a strong mathematical background."},
+            {"positive": "Hands-on problem-solving exercises enhance understanding of linear algebra concepts."},
+            {"negative": "Certain topics, such as matrix operations, may require additional clarification."},
+            {"positive": "Interactive tutorials and practice problems support self-paced learning."},
+            {"negative": "The grading criteria for assignments and exams may seem stringent."},
+            {"positive": "Engaging discussions on the historical development of linear algebra inspire critical thinking."},
+            {"negative": "Insufficient time allocated for individualized assistance may hinder student progress."}
+        ]
+    },
+    {
+        "name": "Baroque Art",
+        "comments": [
+            {"positive": "Immersive discussions on Baroque art and culture foster a deep appreciation for historical creativity."},
+            {"negative": "The sheer volume of artworks and historical contexts may be overwhelming for some students."},
+            {"positive": "In-depth analysis of artistic techniques and styles enriches understanding of Baroque masterpieces."},
+            {"negative": "Certain artworks may seem outdated or irrelevant to contemporary audiences."},
+            {"positive": "Engaging lectures bring the works of Baroque artists to life with vivid storytelling."},
+            {"negative": "Interpretation of ambiguous artworks may vary, leading to conflicting viewpoints."},
+            {"positive": "Exploration of cultural movements and societal contexts provides valuable insights into Baroque society."},
+            {"negative": "The pace of the course may be too fast for some students to fully absorb the material."},
+            {"positive": "Interactive discussions and group activities encourage active participation and critical thinking."},
+            {"negative": "Scheduling conflicts with other courses or extracurricular activities may disrupt the continuity of discussions."}
+        ]
+    },
+    {
+        "name": "Pediatric Nursing",
+        "comments": [
+            {"positive": "Comprehensive discussions on pediatric nursing fundamentals provide a solid foundation for future practice."},
+            {"negative": "The course workload may be overwhelming, especially when combined with clinical rotations."},
+            {"positive": "Hands-on clinical experiences offer invaluable opportunities for skill development."},
+            {"negative": "Certain nursing procedures may be daunting for students without prior healthcare experience."},
+            {"positive": "Guest lectures from experienced pediatric nurses offer practical insights into nursing practice."},
+            {"negative": "Limited emphasis on practical applications in real-world healthcare settings may leave some students feeling unprepared."},
+            {"positive": "Interactive simulations allow students to practice pediatric scenarios in a controlled environment."},
+            {"negative": "Insufficient time allocated for clinical rotations may limit practical learning opportunities."},
+            {"positive": "Engaging discussions on ethical dilemmas in pediatric care foster critical thinking."},
+            {"negative": "Scheduling conflicts with clinical placements or lectures may disrupt the continuity of the course."}
+        ]
+    },
+    {
+        "name": "Software Engineering",
+        "comments": [
+            {"positive": "Practical coding assignments reinforce software engineering concepts, enhancing learning outcomes."},
+            {"negative": "The pace of the course may be too fast for some students, leading to difficulty in keeping up."},
+            {"positive": "In-depth discussions on software development methodologies provide a comprehensive understanding of engineering practices."},
+            {"negative": "Limited emphasis on practical applications in real-world projects may leave some students feeling disconnected."},
+            {"positive": "Abundant resources, including online tutorials and coding platforms, support self-paced learning."},
+            {"negative": "Complex programming languages and frameworks may be daunting for beginners."},
+            {"positive": "Interactive coding exercises challenge students to think creatively and solve real-world problems."},
+            {"negative": "Insufficient time allocated for coding assignments may result in rushed submissions and lower-quality work."},
+            {"positive": "Regular code reviews and feedback sessions facilitate continuous improvement."},
+            {"negative": "Technical glitches during online lectures or coding sessions disrupt the learning experience."}
+        ]
+    },
+    {
+        "name": "Language Acquisition",
+        "comments": [
+            {"positive": "Insightful discussions on language acquisition theories provide a comprehensive understanding of language development."},
+            {"negative": "The sheer breadth of linguistic concepts covered can sometimes blur the focus."},
+            {"positive": "Engaging discussions on language acquisition and development offer valuable insights into human cognition."},
+            {"negative": "Certain theories may seem abstract or disconnected from everyday language use."},
+            {"positive": "Interactive activities and language exercises enhance comprehension of linguistic concepts."},
+            {"negative": "Complex phonological and syntactic rules may be challenging to grasp without sufficient background knowledge."},
+            {"positive": "Exploration of linguistic diversity and cross-cultural communication enriches understanding of global languages."},
+            {"negative": "The course workload may be overwhelming, leaving little time for deeper analysis."},
+            {"positive": "Application-based assignments allow students to apply linguistic theories to real-world language phenomena."},
+            {"negative": "Limited opportunities for practical experience in linguistic research may hinder skill development."}
+        ]
+    },
+    {
+        "name": "Personality Psychology",
+        "comments": [
+            {"positive": "Insightful discussions on personality theories provide a comprehensive understanding of human behavior and cognition."},
+            {"negative": "The complexity of psychological theories may be overwhelming for some students, requiring additional study outside of class."},
+            {"positive": "Engaging case studies and real-life examples illustrate the application of personality concepts in everyday life."},
+            {"negative": "Theoretical discussions may sometimes lack practical implications, leaving students searching for real-world connections."},
+            {"positive": "Interactive activities and group discussions foster a deeper understanding of personality dynamics and individual differences."},
+            {"negative": "The workload can be intensive, requiring substantial reading and reflection outside of class hours."},
+            {"positive": "Application-based assignments allow students to analyze and interpret personality traits in various contexts."},
+            {"negative": "Limited opportunities for hands-on experience or practical application may hinder skill development in psychological assessment."},
+            {"positive": "Regular feedback sessions and peer evaluations promote continuous improvement in understanding and applying personality theories."},
+            {"negative": "Technical issues with online platforms or resources may disrupt the flow of lectures or interactive sessions."}
+        ]
+    },
+    {
+        "name": "Operating Systems",
+        "comments": [
+            {"positive": "In-depth discussions on operating system architecture provide a solid foundation for understanding computing systems."},
+            {"negative": "The complexity of system concepts may be challenging for students without prior programming or computer science knowledge."},
+            {"positive": "Hands-on labs and coding exercises reinforce theoretical concepts, enhancing practical skills."},
+            {"negative": "Certain abstract concepts in operating system design may be difficult to grasp without sufficient background."},
+            {"positive": "Exploration of modern operating system paradigms offers valuable insights into contemporary computing technologies."},
+            {"negative": "The workload can be demanding, requiring extensive time for coding assignments and system analysis."},
+            {"positive": "Application-based projects allow students to design and implement practical solutions to operating system challenges."},
+            {"negative": "Limited access to specialized software or hardware may constrain the scope of student projects."},
+            {"positive": "Regular code reviews and debugging sessions promote collaborative learning and code optimization."},
+            {"negative": "Technical issues with virtual environments or development tools may disrupt lab sessions or assignments."}
+        ]
+    },
+    {
+        "name": "Microbiology",
+        "comments": [
+            {"positive": "Comprehensive coverage of microbiological concepts provides a strong foundation for understanding microbial life and its impact."},
+            {"negative": "The sheer volume of microscopic organisms and their functions may overwhelm students, requiring focused study."},
+            {"positive": "Engaging laboratory experiments and practical demonstrations enhance understanding of microbiological principles."},
+            {"negative": "Complex biochemical pathways and molecular interactions may be challenging to comprehend without prior knowledge."},
+            {"positive": "Exploration of microbial diversity and ecological interactions enriches understanding of microbiological ecosystems."},
+            {"negative": "The workload can be demanding, requiring significant time for laboratory work and data analysis."},
+            {"positive": "Application-based projects allow students to apply microbiological principles to real-world scenarios, such as disease control."},
+            {"negative": "Limited access to specialized equipment or resources may constrain the scope of student experiments."},
+            {"positive": "Regular feedback from lab instructors and peers fosters continuous improvement in experimental techniques and data interpretation."},
+            {"negative": "Technical issues with laboratory equipment or experimental procedures may disrupt hands-on learning experiences."}
+        ]
+    },
+    {
+        "name": "British Literature",
+        "comments": [
+            {"positive": "Insightful analysis of British literary works provides a deeper understanding of cultural and historical contexts."},
+            {"negative": "The dense language and intricate themes of classic literature may pose challenges for some students."},
+            {"positive": "Engaging discussions and critical essays enrich interpretation and appreciation of literary texts."},
+            {"negative": "Certain literary theories or critical approaches may seem abstract or disconnected from the texts."},
+            {"positive": "Exploration of diverse literary genres and periods broadens perspectives on British literary tradition."},
+            {"negative": "The workload can be substantial, requiring extensive reading and analysis of literary texts."},
+            {"positive": "Creative writing assignments allow students to express their interpretations and insights in original compositions."},
+            {"negative": "Limited opportunities for interactive discussions or group activities may hinder engagement."},
+            {"positive": "Regular feedback from instructors and peers facilitates improvement in critical analysis and literary interpretation."},
+            {"negative": "Technical issues with online platforms or resources may disrupt access to course materials or discussions."}
+        ]
+    },
+    {
+        "name": "Fluid Mechanics",
+        "comments": [
+            {"positive": "Thorough coverage of fluid dynamics principles provides a strong foundation for understanding fluid behavior."},
+            {"negative": "The mathematical complexity of fluid mechanics equations may pose challenges for students with weaker math skills."},
+            {"positive": "Hands-on experiments and demonstrations enhance comprehension of theoretical concepts."},
+            {"negative": "Abstract concepts such as viscosity and turbulence may be difficult to visualize without practical demonstrations."},
+            {"positive": "Exploration of real-world applications, such as aerodynamics and hydraulic systems, enriches understanding."},
+            {"negative": "The workload can be demanding, requiring extensive problem-solving and mathematical analysis."},
+            {"positive": "Application-based projects allow students to design and analyze fluid systems in practical scenarios."},
+            {"negative": "Limited access to specialized equipment or facilities may constrain the scope of student experiments."},
+            {"positive": "Regular feedback from instructors and peers promotes continuous improvement in understanding and application."},
+            {"negative": "Technical issues with laboratory equipment or software may disrupt experiments or data analysis."}
+        ]
+    },
+    {
+        "name": "Game Theory",
+        "comments": [
+            {"positive": "In-depth discussions on game theory concepts provide a solid foundation for understanding strategic decision-making."},
+            {"negative": "The mathematical rigor of game theory models may be daunting for students without strong quantitative skills."},
+            {"positive": "Engaging examples and case studies illustrate the application of game theory in various contexts, such as economics and politics."},
+            {"negative": "Certain abstract concepts in game theory may be difficult to grasp without practical examples."},
+            {"positive": "Interactive simulations and group exercises enhance understanding of strategic interactions."},
+            {"negative": "The workload can be intensive, requiring extensive problem-solving and analysis."},
+            {"positive": "Application-based projects allow students to analyze real-world scenarios using game theory principles."},
+            {"negative": "Limited access to specialized software or datasets may constrain the scope of student projects."},
+            {"positive": "Regular feedback from instructors and peers facilitates improvement in strategic analysis and decision-making."},
+            {"negative": "Technical issues with online platforms or simulations may disrupt interactive learning experiences."}
+        ]
+    },
+    {
+        "name": "American Government",
+        "comments": [
+            {"positive": "Insightful discussions on American government institutions provide a comprehensive understanding of political processes."},
+            {"negative": "The complexity of government structures and policies may be overwhelming for students new to political science."},
+            {"positive": "Engaging debates and case studies deepen understanding of democratic principles and governance."},
+            {"negative": "Certain political theories or historical events may seem abstract or disconnected from contemporary politics."},
+            {"positive": "Exploration of diverse political ideologies and policy debates enriches perspectives on American politics."},
+            {"negative": "The workload can be demanding, requiring extensive reading and analysis of political texts."},
+            {"positive": "Application-based assignments allow students to apply political theories to real-world issues and events."},
+            {"negative": "Limited opportunities for hands-on experience in political advocacy or research may hinder skill development."},
+            {"positive": "Regular feedback from instructors and peers fosters critical thinking and analysis of political phenomena."},
+            {"negative": "Technical issues with online platforms or resources may disrupt access to course materials or discussions."}
+        ]
+    },
+    {
+        "name": "Power Systems",
+        "comments": [
+            {"positive": "Thorough coverage of power system fundamentals provides a strong foundation for understanding electrical engineering principles."},
+            {"negative": "The complexity of power system analysis may be challenging for students without prior coursework in electrical engineering."},
+            {"positive": "Hands-on experiments and simulations enhance comprehension of theoretical concepts."},
+            {"negative": "Abstract concepts such as power flow and stability may be difficult to grasp without practical demonstrations."},
+            {"positive": "Exploration of real-world applications, such as renewable energy systems, enriches understanding."},
+            {"negative": "The workload can be demanding, requiring extensive problem-solving and mathematical analysis."},
+            {"positive": "Application-based projects allow students to design and analyze power systems in practical scenarios."},
+            {"negative": "Limited access to specialized equipment or software may constrain the scope of student projects."},
+            {"positive": "Regular feedback from instructors and peers promotes continuous improvement in understanding and application."},
+            {"negative": "Technical issues with laboratory equipment or software may disrupt experiments or data analysis."}
+        ]
+    },
+    {
+        "name": "Sustainable Urban Development",
+        "comments": [
+            {"positive": "Insightful discussions on sustainable development principles provide a comprehensive understanding of urban planning."},
+            {"negative": "The interdisciplinary nature of sustainable development may be challenging for students from single-discipline backgrounds."},
+            {"positive": "Engaging case studies and real-life examples illustrate the application of sustainability concepts in urban contexts."},
+            {"negative": "Certain environmental theories or planning strategies may seem abstract or disconnected from practical implementation."},
+            {"positive": "Exploration of diverse urban challenges and solutions enriches perspectives on sustainable development."},
+            {"negative": "The workload can be demanding, requiring extensive research and analysis of urban issues."},
+            {"positive": "Application-based projects allow students to propose sustainable solutions to real-world urban problems."},
+            {"negative": "Limited opportunities for hands-on experience in urban planning or community projects may hinder skill development."},
+            {"positive": "Regular feedback from instructors and peers fosters critical thinking and innovation in sustainable urban design."},
+            {"negative": "Technical issues with online platforms or resources may disrupt access to course materials or discussions."}
+        ]
+    },
+    {
+        "name": "Ancient History",
+        "comments": [
+            {"positive": "In-depth exploration of ancient civilizations provides a rich understanding of historical contexts and cultural developments."},
+            {"negative": "The vast scope of ancient history may be overwhelming, requiring focused study on specific periods or regions."},
+            {"positive": "Engaging lectures and multimedia resources bring ancient civilizations to life, enhancing comprehension."},
+            {"negative": "Certain historical theories or archaeological methods may seem abstract or speculative to some students."},
+            {"positive": "Exploration of diverse cultures and societal structures enriches perspectives on ancient history."},
+            {"negative": "The workload can be substantial, requiring extensive reading and analysis of historical texts."},
+            {"positive": "Application-based projects allow students to explore archaeological evidence and historical interpretations."},
+            {"negative": "Limited opportunities for hands-on experience in archaeological fieldwork may hinder skill development."},
+            {"positive": "Regular feedback from instructors and peers promotes critical analysis and interpretation of ancient sources."},
+            {"negative": "Technical issues with online platforms or resources may disrupt access to course materials or discussions."}
+        ]
+    },
+    {
+        "name": "Financial Accounting",
+        "comments": [
+            {"positive": "Comprehensive coverage of accounting principles provides a strong foundation for understanding financial transactions."},
+            {"negative": "The complexity of accounting standards and regulations may be challenging for students without prior exposure to finance."},
+            {"positive": "Engaging case studies and practical examples illustrate the application of accounting principles in real-world scenarios."},
+            {"negative": "Certain accounting concepts, such as depreciation or goodwill, may be difficult to grasp without practical experience."},
+            {"positive": "Exploration of financial statements and analysis techniques enriches understanding of financial reporting."},
+            {"negative": "The workload can be intensive, requiring extensive practice and application of accounting principles."},
+            {"positive": "Application-based assignments allow students to analyze financial data and prepare accurate financial statements."},
+            {"negative": "Limited access to accounting software or datasets may constrain the scope of student projects."},
+            {"positive": "Regular feedback from instructors and peers fosters improvement in financial analysis and reporting."},
+            {"negative": "Technical issues with accounting software or online platforms may disrupt learning activities."}
+        ]
+    },
+    {
+        "name": "Astrophysics",
+        "comments": [
+            {"positive": "Thorough coverage of astrophysical principles provides a solid foundation for understanding the universe's workings."},
+            {"negative": "The mathematical complexity of astrophysical equations may be daunting for students without strong quantitative skills."},
+            {"positive": "Engaging discussions and visual aids aid comprehension of complex astrophysical phenomena."},
+            {"negative": "Certain abstract concepts in astrophysics, such as black holes or dark matter, may be difficult to visualize without practical demonstrations."},
+            {"positive": "Exploration of astronomical observations and theoretical models enriches understanding of the cosmos."},
+            {"negative": "The workload can be demanding, requiring extensive problem-solving and mathematical analysis."},
+            {"positive": "Application-based projects allow students to conduct research and analysis on specific astronomical phenomena."},
+            {"negative": "Limited access to telescopes or observatories may constrain the scope of student research projects."},
+            {"positive": "Regular feedback from instructors and peers promotes continuous improvement in astrophysical research skills."},
+            {"negative": "Technical issues with observatory equipment or data analysis software may disrupt research activities."}
+        ]
+    },
+    {
+        "name": "Criminology",
+        "comments": [
+            {"positive": "Insightful discussions on criminological theories provide a comprehensive understanding of crime and deviance."},
+            {"negative": "The complexity of sociological theories and research methods may be challenging for students new to criminology."},
+            {"positive": "Engaging case studies and real-life examples illustrate the application of criminological concepts in criminal justice systems."},
+            {"negative": "Certain theories or methodologies may seem abstract or disconnected from practical applications."},
+            {"positive": "Exploration of diverse crime patterns and societal responses enriches perspectives on criminological issues."},
+            {"negative": "The workload can be demanding, requiring extensive reading and analysis of criminological texts."},
+            {"positive": "Application-based assignments allow students to analyze crime data and propose policy solutions."},
+            {"negative": "Limited opportunities for hands-on experience in criminal justice settings may hinder skill development."},
+            {"positive": "Regular feedback from instructors and peers fosters critical thinking and analysis of criminological phenomena."},
+            {"negative": "Technical issues with online platforms or resources may disrupt access to course materials or discussions."}
+        ]
+    },
+    {
+        "name": "Inorganic Chemistry",
+        "comments": [
+            {"positive": "Comprehensive coverage of inorganic chemistry principles provides a strong foundation for understanding chemical reactions and properties."},
+            {"negative": "The complexity of chemical bonding and coordination chemistry may be challenging for students without strong chemistry background."},
+            {"positive": "Engaging laboratory experiments and demonstrations enhance understanding of theoretical concepts."},
+            {"negative": "Certain abstract concepts, such as molecular symmetry or crystal structures, may be difficult to visualize without practical demonstrations."},
+            {"positive": "Exploration of real-world applications, such as materials science and catalysis, enriches understanding."},
+            {"negative": "The workload can be demanding, requiring extensive laboratory work and data analysis."},
+            {"positive": "Application-based projects allow students to design and synthesize inorganic compounds for specific applications."},
+            {"negative": "Limited access to specialized equipment or reagents may constrain the scope of student experiments."},
+            {"positive": "Regular feedback from lab instructors and peers promotes continuous improvement in experimental techniques and data interpretation."},
+            {"negative": "Technical issues with laboratory equipment or software may disrupt experiments or data analysis."}
+        ]
+    },
+    {
+        "name": "Mass Communication",
+        "comments": [
+            {"positive": "Insightful discussions on mass communication theories provide a comprehensive understanding of media processes and effects."},
+            {"negative": "The rapid evolution of media technologies may make some theories or concepts quickly outdated."},
+            {"positive": "Engaging case studies and contemporary examples illustrate the application of mass communication theories in media contexts."},
+            {"negative": "Certain theoretical frameworks may seem overly simplistic or deterministic in explaining media phenomena."},
+            {"positive": "Exploration of diverse media forms and audiences enriches perspectives on mass communication."},
+            {"negative": "The workload can be substantial, requiring extensive reading and analysis of media texts and theories."},
+            {"positive": "Application-based assignments allow students to analyze media content and assess its impact on society."},
+            {"negative": "Limited opportunities for hands-on experience in media production or analysis may hinder skill development."},
+            {"positive": "Regular feedback from instructors and peers fosters critical thinking and analysis of media messages and effects."},
+            {"negative": "Technical issues with media production equipment or software may disrupt practical learning activities."}
+        ]
+    },
+    {
+        "name": "Differential Equations",
+        "comments": [
+            {"positive": "Thorough coverage of differential equations provides a solid foundation for understanding mathematical modeling and analysis."},
+            {"negative": "The complexity of differential equation solving techniques may be challenging for students without strong mathematical background."},
+            {"positive": "Engaging examples and applications illustrate the relevance of differential equations in various scientific fields."},
+            {"negative": "Certain abstract concepts, such as existence and uniqueness theorems, may be difficult to grasp without practical examples."},
+            {"positive": "Exploration of real-world problems and phenomena enriches understanding of differential equation solutions."},
+            {"negative": "The workload can be demanding, requiring extensive problem-solving and mathematical analysis."},
+            {"positive": "Application-based projects allow students to model and solve differential equations for specific scientific problems."},
+            {"negative": "Limited access to specialized software or computational tools may constrain the scope of student projects."},
+            {"positive": "Regular feedback from instructors and peers promotes continuous improvement in problem-solving techniques."},
+            {"negative": "Technical issues with mathematical software or online resources may disrupt learning activities."}
+        ]
+    },
+    {
+        "name": "Rococo Art",
+        "comments": [
+            {"positive": "In-depth exploration of Rococo art provides a rich understanding of artistic movements and cultural contexts."},
+            {"negative": "The complexity of Rococo aesthetics and themes may be challenging for students without prior exposure to art history."},
+            {"positive": "Engaging visual analyses and historical context deepen appreciation of Rococo artworks."},
+            {"negative": "Certain art theories or critical interpretations may seem subjective or speculative to some students."},
+            {"positive": "Exploration of diverse artists and stylistic elements enriches perspectives on Rococo art."},
+            {"negative": "The workload can be substantial, requiring extensive reading and analysis of art historical texts."},
+            {"positive": "Application-based projects allow students to conduct research and interpretation on specific Rococo artworks."},
+            {"negative": "Limited access to art collections or museums may constrain the scope of student research."},
+            {"positive": "Regular feedback from instructors and peers promotes critical analysis and interpretation of Rococo masterpieces."},
+            {"negative": "Technical issues with online art databases or resources may disrupt access to course materials or discussions."}
+        ]
+    },
+    {
+        "name": "Medical-Surgical Nursing",
+        "comments": [
+            {"positive": "Comprehensive coverage of medical-surgical nursing principles provides a strong foundation for patient care."},
+            {"negative": "The complexity of medical conditions and nursing interventions may be challenging for students new to nursing."},
+            {"positive": "Engaging case studies and simulation exercises enhance understanding of nursing assessments and interventions."},
+            {"negative": "Certain nursing theories or clinical practices may seem abstract or disconnected from real-world patient care."},
+            {"positive": "Exploration of diverse patient populations and healthcare settings enriches perspectives on nursing practice."},
+            {"negative": "The workload can be demanding, requiring extensive study and clinical practice."},
+            {"positive": "Application-based assignments allow students to apply nursing principles to simulated patient scenarios."},
+            {"negative": "Limited access to clinical facilities or patient encounters may constrain the scope of student practice."},
+            {"positive": "Regular feedback from clinical instructors and peers promotes continuous improvement in nursing skills and competencies."},
+            {"negative": "Technical issues with simulation software or clinical equipment may disrupt learning activities."}
+        ]
+    },
+    {
+        "name": "Database Systems",
+        "comments": [
+            {"positive": "Thorough coverage of database principles provides a solid foundation for understanding data management and retrieval."},
+            {"negative": "The complexity of database design and querying languages may be challenging for students without prior programming experience."},
+            {"positive": "Hands-on labs and project assignments reinforce theoretical concepts, enhancing practical skills."},
+            {"negative": "Certain abstract concepts in database theory, such as normalization or transaction management, may be difficult to grasp."},
+            {"positive": "Exploration of real-world applications, such as relational databases and NoSQL systems, enriches understanding."},
+            {"negative": "The workload can be demanding, requiring extensive time for database design and implementation."},
+            {"positive": "Application-based projects allow students to design and implement databases for specific business or research purposes."},
+            {"negative": "Limited access to database management systems or development tools may constrain the scope of student projects."},
+            {"positive": "Regular feedback from instructors and peers promotes continuous improvement in database design and management."},
+            {"negative": "Technical issues with database servers or development environments may disrupt lab sessions or assignments."}
+        ]
+    },
+    {
+        "name": "Syntax and Semantics",
+        "comments": [
+            {"positive": "In-depth coverage of syntax and semantics provides a comprehensive understanding of language structure and meaning."},
+            {"negative": "Theoretical discussions may sometimes lack practical applications, leaving students searching for real-world examples."},
+            {"positive": "Engaging examples and linguistic analyses illustrate the application of syntax and semantics in language comprehension and production."},
+            {"negative": "Certain linguistic theories or abstract concepts may be challenging to grasp without sufficient background knowledge."},
+            {"positive": "Exploration of diverse languages and linguistic phenomena enriches perspectives on syntax and semantics."},
+            {"negative": "The workload can be intensive, requiring substantial reading and analysis of linguistic texts."},
+            {"positive": "Application-based assignments allow students to analyze language structures and meanings in real-world contexts."},
+            {"negative": "Limited opportunities for hands-on experience in linguistic research or language analysis may hinder skill development."},
+            {"positive": "Regular feedback from instructors and peers fosters critical thinking and analysis of linguistic structures and meanings."},
+            {"negative": "Technical issues with linguistic databases or analysis tools may disrupt research activities or assignments."}
+        ]
+    }
+]

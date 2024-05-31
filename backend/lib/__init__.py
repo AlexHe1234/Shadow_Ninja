@@ -1,8 +1,5 @@
 import os
-
 from llm import LLM
-from rs import CourseRecommenderSystem
-
 from utils.config_utils import *
 
 
@@ -23,4 +20,3 @@ rs_config = cfg_from_file(os.path.join(config_dir, 'rec_sys.yaml'))
 # initialize global objects
 # NOTE: please don't re-initialize them
 foundation_model = LLM(**llm_config)
-recommender_sys = CourseRecommenderSystem(**rs_config)
