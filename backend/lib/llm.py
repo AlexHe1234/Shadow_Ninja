@@ -2,7 +2,7 @@ from openai import OpenAI
 
 
 """OpenAi-like API for LM-studio"""
-class LLM_API:
+class LLM:
     def __init__(self,
                  url: str = 'http://localhost:1234/v1',
                  api_key: str = 'lm-studio',
