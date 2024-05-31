@@ -40,6 +40,8 @@ def extract_data(data_dir):
         comment_list = [list(it.values())[0] for it in comment[i]['comments']]
         course[i]['comment'] = comment_list
         
+    # student: id, name, major
+    # course:  id, name, major, comment
     return student, course 
 
 

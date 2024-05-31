@@ -24,7 +24,7 @@ class LLM:
 			temperature=temperature,
 		)
         
-        return completion.choices[0].message
+        return dict(completion.choices[0].message)['content']
     
     def forward_image(self,
                       ):
