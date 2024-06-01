@@ -20,8 +20,8 @@ class LLMRS:
                  ):
         self.sys_1 = stage1_sys_cmd
         self.usr_1 = stage1_usr_cmd
-        self.sys_2 = stage1_sys_cmd
-        self.usr_2 = stage1_usr_cmd
+        self.sys_2 = stage2_sys_cmd
+        self.usr_2 = stage2_usr_cmd
 
     def recommend(self, bundle):
         student = bundle['src']
@@ -123,5 +123,6 @@ if __name__ == '__main__':
     # rs.recommend(aux=None)
     stu = data_factory.get_student(id_test)
     print(f'For {stu["name"]} majoring in {stu["major"]}')
-    name, major = rs.recommend(aux='The course should be light in workload')
+    inp = input()
+    name, major = rs.recommend(aux=inp)
     print(f'We recommend {name} of {major}')
