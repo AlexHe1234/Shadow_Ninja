@@ -23,6 +23,11 @@ const routes = [
         path: '/register',
         name: 'Register',
         component: () => import('../views/RegisterView.vue')
+      },
+      {
+        path: '/course-evaluation',
+        name: 'CourseEvaluation',
+        component: () => import('../views/CourseEvaluation.vue') // 新增的课程评价页面
       }
     ]
   },
