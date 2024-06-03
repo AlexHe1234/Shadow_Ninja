@@ -28,6 +28,11 @@ const routes = [
         path: '/course-evaluation',
         name: 'CourseEvaluation',
         component: () => import('../views/CourseEvaluation.vue') // 新增的课程评价页面
+      },
+      {
+        path: '/teacher-evaluation',
+        name: 'TeacherEvaluation',
+        component: () => import('../views/TeacherEvaluation.vue') // 新增的教师评价页面
       }
     ]
   },

@@ -3,6 +3,7 @@
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/course-evaluation">课程评价</router-link>
+      <router-link to="/teacher-evaluation">教师评价</router-link>
       <router-link to="/login">登录</router-link>
       <router-link to="/register">注册</router-link>
     </nav>
