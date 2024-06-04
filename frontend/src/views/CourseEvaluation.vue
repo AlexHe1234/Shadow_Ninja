@@ -25,14 +25,11 @@
               <v-card-text>
                 <v-list>
                   <v-list-item-group>
-                    <v-list-item v-for="course in filteredCourses" :key="course.id">
+                    <v-list-item v-for="course in filteredCourses" :key="course.id" outlined @click="selectCourse(course)">
                       <v-list-item-content>
                         <v-list-item-title>{{ course.name }}</v-list-item-title>
                         <v-list-item-subtitle>{{ course.department }} - {{ course.credits }} 学分</v-list-item-subtitle>
                       </v-list-item-content>
-                      <v-list-item-action>
-                        <v-chip :color="courseStatusColor(course.status)">{{ course.status }}</v-chip>
-                      </v-list-item-action>
                     </v-list-item>
                   </v-list-item-group>
                 </v-list>
@@ -42,10 +39,19 @@
         </v-tabs-items>
       </v-col>
     </v-row>
+    <v-row v-if="selectedCourse">
+      <v-col>
+        <CourseDetail :course="selectedCourse" />
+      </v-col>
+    </v-row>
   </v-container>
+  
 </template>
 
 <script>
+import CourseReview from './CourseReview.vue';
+import CourseDetail from './CourseDetail.vue';
+
 export default {
   name: 'CourseEvaluation',
   data() {
@@ -61,8 +67,10 @@ export default {
         { id: 5, code: '21191340', name: '数字媒体后期制作', credits: '2.0', category: '专业课', department: '计算机科学与技术学院', status: '未选' },
         { id: 6, code: '222222', name: '测试课程', credits: '2.0', category: '通识必修课程', department: '计算机科学与技术学院', status: '未选' }
       ],
-      filteredCourses: []
+      filteredCourses: [],
+      selectedCourse: null // 新添加的属性
     };
+  
   },
   methods: {
   searchCourses() {
@@ -77,6 +85,9 @@ export default {
         course.category === this.categories[this.activeTab]
       );
     }
+  },
+  selectCourse(course) {
+    this.selectedCourse = course;
   },
   courseStatusColor(status) {
     switch (status) {
