@@ -9,7 +9,6 @@
           </v-tab>
         </v-tabs>
         <v-tabs-items v-model="activeTab">
-
           <v-card flat>
             <v-card-text>
               <v-list>
@@ -25,25 +24,25 @@
               </v-list>
             </v-card-text>
           </v-card>
-
         </v-tabs-items>
       </v-col>
     </v-row>
     <v-row v-if="selectedCourse">
       <v-col>
-        <CourseDetail :course="selectedCourse" />
+        <CourseDetail :course="selectedCourse" @add-review="addReview" />
       </v-col>
     </v-row>
   </v-container>
-
 </template>
 
 <script>
-import CourseReview from './CourseReview.vue';
 import CourseDetail from './CourseDetail.vue';
 
 export default {
   name: 'CourseEvaluation',
+  components: {
+    CourseDetail
+  },
   data() {
     return {
       activeTab: 0,
@@ -311,13 +310,12 @@ export default {
         }
       ],
       filteredCourses: [],
-      selectedCourse: null // 新添加的属性
+      selectedCourse: null
     };
-
   },
   methods: {
     searchCourses() {
-      this.filteredCourses = [];  // 清空之前的搜索结果
+      this.filteredCourses = [];
       if (this.searchTerm) {
         this.filteredCourses = this.courses.filter(course =>
           course.name.toLowerCase().includes(this.searchTerm.toLowerCase()) &&
@@ -330,31 +328,30 @@ export default {
       }
     },
     selectCourse(course) {
+      console.log("Click detected, course:", course); // 检查点击是否触发
       this.selectedCourse = course;
+      console.log("Selected course set:", this.selectedCourse); // 确认selectedCourse被正确设置
     },
-    courseStatusColor(status) {
-      switch (status) {
-        case '已选':
-          return 'yellow lighten-3';
-        case '未选':
-          return 'blue lighten-4';
-        default:
-          return 'grey lighten-2';
+    addReview(courseId, review) {
+      const course = this.courses.find(c => c.id === courseId);
+      if (course) {
+        course.reviews.push(review);
+        // Update the course rating based on the new review
+        course.rating = (course.rating * (course.reviews.length - 1) + review.rating) / course.reviews.length;
       }
     }
   },
   mounted() {
-    this.searchCourses();  // 在组件加载后进行一次全局搜索初始化
+    this.searchCourses();
   },
   watch: {
     activeTab() {
-      this.searchCourses();  // 当标签页变更时重新搜索
+      this.searchCourses();
     },
     searchTerm() {
-      this.searchCourses();  // 当搜索词变更时重新搜索
+      this.searchCourses();
     }
   }
-
 };
 </script>
 

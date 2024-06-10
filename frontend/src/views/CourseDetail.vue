@@ -1,60 +1,57 @@
 <template>
-    <div class="course-detail border-box">
-      <h2>{{ course.name }}</h2>
-      <p>{{ course.department }} - {{ course.credits }} 学分</p>
-      <div v-if="course.ratings.length > 0">
-        <h3>评分:</h3>
-        <v-rating
-          :value="course.rating"
-          color="amber"
-          dense
-          half-increments
-          readonly
-          size="24"
-        ></v-rating>
-        <span>({{ course.ratings.length }} 个评分)</span>
-      </div>
-      <div v-if="course.reviews.length > 0">
-        <h3>评论:</h3>
-        <v-list>
-          <v-list-item v-for="(review, index) in course.reviews" :key="index">
-            <v-list-item-content>
-              <v-list-item-title>{{ review.title }}</v-list-item-title>
-              <v-list-item-subtitle>{{ review.text }}</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </div>
-      <div v-else>
-        <p>暂无评论</p>
-      </div>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    props: {
-      course: {
-        type: Object,
-        required: true
+  <v-card>
+    <v-card-title>
+      <span class="headline">{{ course.name }}</span>
+    </v-card-title>
+    <v-card-text>
+      <p>课程代码: {{ course.code }}</p>
+      <p>学分: {{ course.credits }}</p>
+      <p>所属学院: {{ course.department }}</p>
+      <p v-if="course.rating !== undefined">评分: {{ course.rating.toFixed(1) }} / 5.0</p>
+      <p v-else>评分: 暂无</p>
+      <v-divider></v-divider>
+      <v-subheader>评论</v-subheader>
+      <v-list>
+        <v-list-item v-for="(review, index) in course.reviews" :key="index">
+          <v-list-item-content>
+            <v-list-item-title>评分: {{ review.rating }} / 5</v-list-item-title>
+            <v-list-item-subtitle>{{ review.comment }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+      <v-divider></v-divider>
+      <v-text-field v-model="newComment" label="输入评价" outlined></v-text-field>
+      <v-rating v-model="newRating" max="5" half-increments></v-rating>
+      <v-btn color="primary" @click="submitReview">提交</v-btn>
+    </v-card-text>
+  </v-card>
+</template>
+
+<script>
+export default {
+  name: 'CourseDetail',
+  props: {
+    course: Object
+  },
+  data() {
+    return {
+      newComment: '',
+      newRating: 0
+    };
+  },
+  methods: {
+    submitReview() {
+      if (this.newComment && this.newRating) {
+        this.$emit('add-review', this.course.id, {
+          rating: this.newRating,
+          comment: this.newComment
+        });
+        this.newComment = '';
+        this.newRating = 0;
+      } else {
+        alert("请填写完整的评论和评分！");
       }
-    },
-    computed: {
-  courseRating() {
-    const { course } = this;
-    if (course.ratings.length > 0) {
-      return course.ratings.reduce((total, rating) => total + rating, 0) / course.ratings.length;
-    } else {
-      return 0;
     }
   }
-  }
-  }
-  </script>
-  
-  <style scoped>
-  .course-detail {
-    margin-top: 20px;
-    padding: 20px;
-  }
-  </style>
+};
+</script>
