@@ -12,14 +12,14 @@
               width="100%"
               >
                 <div>
-                    <h2 class="text-h4 font-weight-black text-orange">Welcome to IOT-WEB!</h2>
+                    <h2 class="text-h4 font-weight-black text-orange">智能课程评价系统</h2>
             
                     <div class="text-h5 font-weight-medium mb-2">
-                    You can now try our IoT device management system!
+                    欢迎，何同学
                     </div>
-
+<!-- 
                     <v-btn href="/register" variant="text" color="orange">Go to Signup</v-btn>
-                    <v-btn href="/login" variant="text" color="orange">Go to Login</v-btn>
+                    <v-btn href="/login" variant="text" color="orange">Go to Login</v-btn> -->
                 </div>
               </v-sheet>
             </v-row>
