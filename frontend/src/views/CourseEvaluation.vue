@@ -1,11 +1,11 @@
 <template>
-  <h1 class="centered-title">智能课程评价系统</h1>
   <v-container>
     <v-row>
       <v-col cols="12">
         <v-text-field v-model="searchTerm" label="搜索课程" single-line hide-details @input="searchCourses"></v-text-field>
         <v-tabs v-model="activeTab" background-color="blue-grey lighten-5" fixed-tabs @change="searchCourses">
-          <v-tab v-for="(category, index) in categories" :key="index">
+          <v-tab v-for="(category, index) in categories" :key="index" :class="{ 'active-tab': activeTab === index }"
+            @click="activeTab = index">
             {{ category }}
           </v-tab>
         </v-tabs>
@@ -14,7 +14,8 @@
             <v-card-text>
               <v-list>
                 <v-list-item-group>
-                  <v-list-item v-for="course in filteredCourses" :key="course.id" outlined
+                  <v-list-item v-for="course in filteredCourses" :key="course.id"
+                    :class="{ 'selected-item': selectedCourse && selectedCourse.id === course.id }" outlined
                     @click="selectCourse(course)">
                     <v-list-item-content>
                       <v-list-item-title>{{ course.name }}</v-list-item-title>
@@ -356,8 +357,20 @@ export default {
 };
 </script>
 
+
+
 <style scoped>
+.selected-item {
+  transition: background-color 0.3s ease;
+  /* 添加平滑的过渡效果 */
+  background-color: rgb(255, 255, 255);
+}
+.active-tab {
+  background-color: rgb(88, 129, 87) !important; /* 确保此样式优先级更高 */
+  color: white; /* 设置文字颜色 */
+}
 .v-card {
+
   transition: background-color 0.3s ease;
 }
 </style>
