@@ -6,6 +6,11 @@ from gevent import pywsgi
 import logging
 
 app = create_app()
+
+@app.route('/')
+def home():
+    return 'Hello, Flask is running!'
+
 from apps import db
 
 topic = 'testapp'

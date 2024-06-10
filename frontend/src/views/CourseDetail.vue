@@ -5,14 +5,36 @@
     </v-card-title>
     <v-card-text>
       
+      <!-- 课程信息 -->
+      <v-subheader>【基本信息】</v-subheader>
       <p>课程代码: {{ course.code }}</p>
       <p>学分: {{ course.credits }}</p>
       <p>所属学院: {{ course.department }}</p>
-      <p v-if="course.rating !== undefined">评分: {{ course.rating.toFixed(1) }} / 5.0</p>
+      <p v-if="averageRating !== undefined">平均评分: {{ averageRating.toFixed(1) }} / 5.0</p>
       <p v-else>评分: 暂无</p>
+      <br>
       <v-divider></v-divider>
+
+      <br>
+
+      <!-- 新增展示所有评论的部分 -->
+      <v-subheader> 【所有评论】</v-subheader>
+      <v-list dense>
+        <v-list-item v-for="(review, index) in course.reviews" :key="index">
+          <v-list-item-content>
+            <v-list-item-title>{{ '# Review Record # ' + (index + 1) }}</v-list-item-title>
+            <v-list-item-subtitle>{{ review }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+      <br>
+      <v-divider></v-divider>
+
+      <br>
+
       
-      <v-subheader> 评论AI总结 </v-subheader>
+      <v-subheader> 【评论AI总结】 </v-subheader>
+      <br>
       <!-- AI评论总结按钮 -->
       <v-btn @click="fetchCourseReviewSummary">点击查看最新总结</v-btn>
       <!-- AI评论总结文本显示区域 -->
@@ -56,18 +78,20 @@ export default {
   },
   methods: {
     fetchCourseReviewSummary() {
-    },
 
-    fetchCommentsFromJson(courseId) {
-      // 这里你需要实现从JSON文件读取评论数据的逻辑，或者通过后端API请求
-      // 这里暂时模拟返回数据，实际应从后端或文件中获取
-      return {
-        comments: [
-          {positive: "Engaging discussions on the intricacies of human behavior enhance understanding."},
-          {negative: "Overlapping content in lectures and readings can lead to redundancy."},
-          {positive: "Practical applications of psychological theories enrich the learning experience."}
-        ]
-      };
+      // 暂时替代
+      this.reviewSummary = 'THIS IS THE SUMMARY OF THE REVIEWS TO THIS COURSE.';
+
+      // 从后端API请求数据(暂时不可用)
+      // fetch('http://localhost:5000/api/course/' + this.course.id + '/reviews')
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     this.reviewSummary = data.summary;
+      //   });
+
+      return this.reviewSummary;
+        //call openai api to analyse the reviews in this.course.reviews
+        //return the summary of the reviews
     },
 
     submitReview() {
@@ -82,6 +106,23 @@ export default {
         alert("请填写完整的评论和评分！");
       }
     }
-  }
+  },
+  // 新增：计算属性，用于计算课程的平均评分
+  computed: {
+    averageRating() {
+      if (!this.course.reviews || this.course.reviews.length === 0) {
+        return undefined;
+      }
+      const totalRating = this.course.reviews.reduce((sum, review) => sum + review[0], 0);
+      return totalRating / this.course.reviews.length;
+    }
+  },
+  data() {
+    return {
+      newComment: '',
+      newRating: 0,
+      reviewSummary: ''
+    };
+  },
 };
 </script>
