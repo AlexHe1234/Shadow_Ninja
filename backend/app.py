@@ -11,5 +11,5 @@ from apps import db
 topic = 'testapp'
 
 if __name__ == '__main__':
-    server = pywsgi.WSGIServer(('0.0.0.0', 5000), app)
+    server = pywsgi.WSGIServer(('0.0.0.0', 8000), app)
     server.serve_forever()

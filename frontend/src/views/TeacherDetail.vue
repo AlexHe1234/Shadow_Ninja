@@ -8,7 +8,7 @@
         <br>
         <select v-model="rating">
           <option disabled value="">请选择评分</option>
-          <option v-for="n in 5" :key="n" :value="n">{{ n }} 星</option>
+          <option v-for="n in 5" :key="n" :value="n">{{ n }}</option>
         </select>
         <br>
         <button @click="submitReview">提交</button>
