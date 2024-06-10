@@ -55,8 +55,8 @@ export default {
         { id: 2, code: '2110860', name: '科研实践 I', credits: '2.0', category: '专业课', department: '计算机科学与技术学院', status: '未选' },
         { id: 3, code: '2110870', name: '科研实践 II', credits: '4.0', category: '专业课', department: '计算机科学与技术学院', status: '未选' },
         { id: 4, code: '2119070', name: '计算机前沿技术讲座', credits: '1.0', category: '专业课', department: '计算机科学与技术学院', status: '未选' },
-        { id: 5, code: '21191340', name: '数字媒体后期制作', credits: '2.0', category: '专业课', department: '计算机科学与技术学院', status: '未选' },
-        { id: 6, code: '222222', name: '生命探索', credits: '2.0', category: '通识必修课程', department: '生命科学学院', status: '未选' },
+        { id: 5, code: '2119134', name: '数字媒体后期制作', credits: '2.0', category: '专业课', department: '计算机科学与技术学院', status: '未选' },
+        { id: 6, code: '2222222', name: '生命探索', credits: '2.0', category: '通识必修课程', department: '生命科学学院', status: '未选' },
         {
           "id": 7,
           "code": "2110930",
