@@ -1,40 +1,29 @@
 <template>
-  <div class="blank-block"></div>
   <div id="app">
     <nav>
       <div class="card-container">
-      <div class="card">
-        <router-link to="/">
-          <div class="card-content">首页</div>
-        </router-link>
-      </div>
+        <div class="card">
+          <router-link to="/">
+            <div class="card-content">首页</div>
+          </router-link>
+        </div>
 
-      <div class="card">
-        <router-link to="/course-evaluation">
-          <div class="card-content">课程评价</div>
-        </router-link>
-      </div>
+        <div class="card">
+          <router-link to="/course-evaluation">
+            <div class="card-content">课程评价</div>
+          </router-link>
+        </div>
 
-      <div class="card">
-        <router-link to="/teacher-evaluation">
-          <div class="card-content">教师评价</div>
-        </router-link>
+        <div class="card">
+          <router-link to="/teacher-evaluation">
+            <div class="card-content">教师评价</div>
+          </router-link>
+        </div>
       </div>
-    </div>
-
-      <!-- <div class="rounded-box">
-        <router-link to="/">Home</router-link>
-      </div>
-      <div class="rounded-box">
-      <router-link to="/course-evaluation">课程评价</router-link>
-      </div>
-      <div class="rounded-box">
-      <router-link to="/teacher-evaluation">教师评价</router-link>
-      </div> -->
-      <!-- <router-link to="/login">登录</router-link>
-      <router-link to="/register">注册</router-link> -->
     </nav>
-    <router-view />
+    <div class="content-area">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -43,11 +32,18 @@
 </script>
 
 <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
 nav {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
+  height: 50px; /* Adjustthe height as needed */
 }
 
 router-link {
@@ -58,14 +54,13 @@ router-link {
 router-link-active {
   font-weight: bold;
 }
+
+.content-area {
+  /* Add any necessary styles for the content area */
+}
 </style>
 
-
 <style scoped>
-.blank-block {
-  height: 20px;
-}
-
 .card-container {
   display: flex;
   justify-content: center;
@@ -86,7 +81,7 @@ router-link-active {
 }
 
 .card:hover {
-  background-color: #d0d0d0;
+  background-color: #588157;
 }
 
 .card a {
@@ -96,7 +91,7 @@ router-link-active {
 }
 
 .card a.router-link-exact-active {
-  color: #20965f;
+  color: #A3B18A;
   font-weight: bold;
 }
 

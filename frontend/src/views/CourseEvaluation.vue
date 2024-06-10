@@ -1,4 +1,5 @@
 <template>
+  <h1 class="centered-title">智能课程评价系统</h1>
   <v-container>
     <v-row>
       <v-col cols="12">
