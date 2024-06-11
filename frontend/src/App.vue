@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <div class="top-left-logo">
+      <img src="./assets/logo.jpg" alt="Logo" class="logo-image"></img>
+    </div>
+    <div class="top-left-title">教育信息管理系统</div>
+    <!-- Rest of the template -->
     <nav>
       <div class="card-container">
         <div class="card">
@@ -73,6 +78,39 @@ router-link-active {
 </style>
 
 <style scoped>
+.top-left-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.top-left-title {
+  position: absolute;
+  top: 10px;
+  left: 70px; /* Adjust the left position to accommodate the logo */
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 12px;
+}
+.top-left-title {
+  position: absolute;
+  top: 5px;
+  left: 60px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 12px; /* Add padding here */
+}
+
 .card-container {
   display: flex;
   justify-content: center;

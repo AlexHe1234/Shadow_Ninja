@@ -22,6 +22,7 @@
 
 <script>
 import axios from 'axios';
+import { getapi, postapi } from "../utils/http.js";
 
 export default {
   props: ['teacher'],
@@ -53,22 +54,35 @@ export default {
         });
     },
     submitReview() {
+      console.log('hi')
       if (this.review && this.rating) {
-        axios.post(`/api/teachers/${this.teacher.id}/reviews`, {
-          review: this.review,
-          rating: parseInt(this.rating)
-        })
-        .then(() => {
-          this.teacher.reviews.push(this.review);
-          this.teacher.ratings.push(parseInt(this.rating));
-          this.reviews.push(this.review);
+        // axios.post(`/api/teachers/${this.teacher.id}/reviews`, {
+        //   review: this.review,
+        //   rating: parseInt(this.rating)
+        // })
+        // .then(() => {
+          // this.teacher.reviews.push(this.review);
+          // this.teacher.ratings.push(parseInt(this.rating));
+          // this.reviews.push(this.review);
+          postapi('/api/user/add_teacher_comment', {
+            teacher: this.teacher.name,
+            review: this.review,
+            rating: this.rating
+          })
+          .then( (response) => {
+              this.courses = response.data
+          })
+          .catch(error => {
+              // this.result = '';
+          // console.log('error');
+          });
           this.review = '';
           this.rating = '';
           alert('评价提交成功');
-        })
-        .catch(error => {
-          console.error('Error submitting review:', error);
-        });
+        // })
+        // .catch(error => {
+        //   console.error('Error submitting review:', error);
+        // });
       } else {
         alert('请填写完整的评价和评分');
       }

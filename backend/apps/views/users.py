@@ -99,9 +99,11 @@ def _get_course_and_comments():
 
 @user_blue.route('/add_teacher_comment', methods=['POST']) # 登录路由，向 /user/login 发送请求则会被此函数捕获
 def add_teacher_comment():
+    
     reqData = request.get_json() # 获取请求数据
-    _add_teacher_comment(reqData['teacher'], reqData['review'], reqData['rating'])
     print(reqData)
+    
+    _add_teacher_comment(reqData['teacher'], reqData['review'], reqData['rating'])
     dict0 = {}
     dict0["status"] = 0
     dict0["resp"] = "Add teacher comment success!"
@@ -134,11 +136,15 @@ def get_summary():
     dict0 = {'summary': res}
     return make_response(dict0, 200)
 
+def _get_teacher():
+    return ['']
+
 @user_blue.route('/get_teacher', methods=['POST'])
 # @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
 def get_teacher():
     # print('hi')
-    reqData = request.get_json() # 获取请求数据
-    res = _get_summary(reqData['course_name'])
+    # reqData = request.get_json() # 获取请求数据
+    # res = _get_summary(reqData['course_name'])
+    res = _get_teacher()
     dict0 = {'teacher': res}
     return make_response(dict0, 200)

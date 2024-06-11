@@ -37,7 +37,7 @@
 
 <style scoped>
 .background-image {
-  background-image: url('../assets/bg.jpg');
+  background-image: url('../assets/Background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
