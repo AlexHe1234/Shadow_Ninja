@@ -138,6 +138,7 @@ export default {
       } else {
         alert("请填写完整的评论和评分！");
       }
+      // initialize();
     }
   },
   computed: {

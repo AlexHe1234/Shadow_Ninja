@@ -66,6 +66,13 @@ export default {
     };
   },
   methods: {
+    startFetchCommentsInterval() {
+      this.initialize()
+      this.intervalId = setInterval(this.initialize(), 5000)
+    },
+    stopFetchCommentsInterval() {
+      clearInterval(this.intervalId)
+    },
     initialize () {
       console.log('hikasjhdfkjn');
       // this.courses = [
@@ -125,11 +132,13 @@ export default {
     }
   },
   mounted() {
-    this.initialize()
-
+    this.startFetchCommentsInterval();
     this.searchCourses();
-    // console.log("hihi")
   },
+  beforeUnmount() {
+    this.stopFetchCommentsInterval()
+  },
+
   watch: {
     activeTab() {
       this.searchCourses();
@@ -140,13 +149,7 @@ export default {
   },
 
 };
-
-
-
 </script>
-
-
-
 
 <style scoped>
 .selected-item {

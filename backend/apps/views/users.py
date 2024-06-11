@@ -133,3 +133,12 @@ def get_summary():
     res = _get_summary(reqData['course_name'])
     dict0 = {'summary': res}
     return make_response(dict0, 200)
+
+@user_blue.route('/get_teacher', methods=['POST'])
+# @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
+def get_teacher():
+    # print('hi')
+    reqData = request.get_json() # 获取请求数据
+    res = _get_summary(reqData['course_name'])
+    dict0 = {'teacher': res}
+    return make_response(dict0, 200)
