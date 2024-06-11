@@ -29,3 +29,6 @@ class LLM:
     def forward_image(self,
                       ):
         raise NotImplementedError()
+
+
+lm = LLM()

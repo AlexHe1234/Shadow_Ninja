@@ -19,6 +19,12 @@
             <div class="card-content">教师评价</div>
           </router-link>
         </div>
+
+        <div class="card">
+          <router-link to="/course-recommend">
+            <div class="card-content">选课推荐</div>
+          </router-link>
+        </div>
       </div>
     </nav>
     <div class="content-area">

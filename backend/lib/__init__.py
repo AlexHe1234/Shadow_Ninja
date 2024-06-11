@@ -1,5 +1,5 @@
 import os
-from llm import LLM
+from backend.apps.views.llm import LLM
 from data_factory import DataFactory
 from utils.config_utils import *
 

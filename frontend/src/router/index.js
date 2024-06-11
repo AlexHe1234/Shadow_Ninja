@@ -33,6 +33,11 @@ const routes = [
         path: '/teacher-evaluation',
         name: 'TeacherEvaluation',
         component: () => import('../views/TeacherEvaluation.vue') // 新增的教师评价页面
+      },
+      {
+        path: '/course-recommend',
+        name: 'CourseRecommend',
+        component: () => import('../views/CourseRecommend.vue') // 新增的教师评价页面
       }
     ]
   },
