@@ -55,6 +55,7 @@ def login():
 @user_blue.route('/getUserInfo', methods=['GET'])
 @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
 def getUserInfo():
+    print('yiyiiy')
     current_user_id = get_jwt_identity()
     user_list = User.query.filter(User.id == current_user_id).all()
     dict0 = {
@@ -62,25 +63,26 @@ def getUserInfo():
         "username": user_list[0].name,
         "email": user_list[0].email
     }
-    return make_response(dict0, 200)
+    # return make_response(dict0, 200)
 
 @user_blue.route('/modifyName', methods=['POST'])
 @jwt_required()
 def modifyName():
-    reqData = request.get_json()
-    current_user_id = get_jwt_identity()
-    newName = reqData['newname']
-    dict0 = {}
-    user_list = User.query.filter(User.name == newName).all()
-    if user_list is None:
-        dict0["status"] = -1
-        dict0["resp"] = "The username has already been registered!"
-        return make_response(dict0, 200)
-    User.query.filter_by(id=current_user_id).update({'name':newName})
-    db.session.commit()
-    dict0["status"] = 0
-    dict0["resp"] = "Modify Name Success!"
-    return make_response(dict0, 200)
+    print('hey')
+    # reqData = request.get_json()
+    # current_user_id = get_jwt_identity()
+    # newName = reqData['newname']
+    # dict0 = {}
+    # user_list = User.query.filter(User.name == newName).all()
+    # if user_list is None:
+    #     dict0["status"] = -1
+    #     dict0["resp"] = "The username has already been registered!"
+    #     return make_response(dict0, 200)
+    # User.query.filter_by(id=current_user_id).update({'name':newName})
+    # db.session.commit()
+    # dict0["status"] = 0
+    # dict0["resp"] = "Modify Name Success!"
+    # return make_response(dict0, 200)
 
 @user_blue.route('/modifyEmail', methods=['POST'])
 @jwt_required()

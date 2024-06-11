@@ -18,6 +18,7 @@
   </template>
   
   <script>
+  import { getapi, postapi } from "../utils/http.js";
   export default {
     props: ['teacher'],
     data() {
@@ -34,17 +35,39 @@
       }
     },
     methods: {
-      submitReview() {
-        if (this.review && this.rating) {
-          this.teacher.reviews.push(this.review);
-          this.teacher.ratings.push(parseInt(this.rating));
-          this.review = '';
-          this.rating = '';
-          alert('评价提交成功');
-        } else {
-          alert('请填写完整的评价和评分');
-        }
+      // submitReview() {
+      //   if (this.review && this.rating) {
+      //     this.teacher.reviews.push(this.review);
+      //     this.teacher.ratings.push(parseInt(this.rating));
+      //     this.review = '';
+      //     this.rating = '';
+      //     alert('评价提交成功');
+      //   } else {
+      //     alert('请填写完整的评价和评分');
+      //   }
+      // }
+
+   submitReview() {
+      if (this.review && this.rating) {
+        // Make a GET request to the backend to get user information
+        getapi('/api/user/getUserInfo')
+          .then(response => {
+            // Update the teacher object with the new review and rating
+            this.teacher.reviews.push(this.review);
+            this.teacher.ratings.push(parseInt(this.rating));
+            this.review = '';
+            this.rating = '';
+            alert('评价提交成功');
+          })
+          .catch(error => {
+            console.error('Error submitting review:', error);
+            alert('提交评价时出现错误');
+          });
+      } else {
+        alert('请填写完整的评价和评分');
       }
+    }
+
     }
   };
   </script>
