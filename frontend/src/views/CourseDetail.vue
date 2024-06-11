@@ -111,12 +111,30 @@ export default {
 
     submitReview() {
       if (this.newComment && this.newRating) {
-        this.$emit('add-review', this.course.id, {
-          rating: this.newRating,
-          comment: this.newComment
+        // this.$emit('add-review', this.course.id, {
+        //   rating: this.newRating,
+        //   comment: this.newComment
+        // });
+
+        postapi('/api/user/add_course_comment', 
+        {
+          course: this.course.id,
+          review: this.newComment,
+          rating: this.newRating
+        })
+        .then( (response) => {
+            this.newComment = '';
+            this.newRating = 0;
+            if (response.data.status == 0) {
+              alert('评论提交成功！');
+            } else {
+              alert('评论提交失败，请用好听点的口吻！');
+            }
+        })
+        .catch(error => {
+            // this.result = '';
+        // console.log('error');
         });
-        this.newComment = '';
-        this.newRating = 0;
       } else {
         alert("请填写完整的评论和评分！");
       }
