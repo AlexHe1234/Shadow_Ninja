@@ -2,47 +2,49 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        
-        <!-- 当searchTerm变化时触发searchCourses方法 -->
+        <!-- 搜索课程和选项卡部分 -->
         <v-text-field v-model="searchTerm" label="搜索课程" single-line hide-details @input="searchCourses"></v-text-field> 
         
-        <!-- 搜索框键入时，备选选项卡组件；当searchCourses方法被触发时，选项卡组件会被重新渲染 -->
-        <v-tabs v-model="activeTab" background-color="blue-grey lighten-5" fixed-tabs @change="searchCourses">
-          <!-- 使用v-for指令遍历categories数组，为每个选项卡绑定点击事件；当用户点击一个标签时，它会更新 activeTab 的值为被点击的标签的索引 -->
-          <v-tab v-for="(category, index) in categories" :key="index" :class="{ 'active-tab': activeTab === index }"
-            @click="activeTab = index">
-            {{ category }}
-          </v-tab>
-        </v-tabs>
+        <!-- 只有在没有选择特定课程时，才显示选项卡和课程列表 -->
+        <template v-if="!selectedCourse">
+          <v-tabs v-model="activeTab" background-color="blue-grey lighten-5" fixed-tabs @change="searchCourses">
+            <v-tab v-for="(category, index) in categories" :key="index" :class="{ 'active-tab': activeTab === index }"
+              @click="activeTab = index">
+              {{ category }}
+            </v-tab>
+          </v-tabs>
 
-        <v-tabs-items v-model="activeTab">
-          <v-card flat>
-            <v-card-text>
-              <v-list>
-                <v-list-item-group>
-                  <v-list-item v-for="course in filteredCourses" :key="course.id"
-                    :class="{ 'selected-item': selectedCourse && selectedCourse.id === course.id }" outlined
-                    @click="selectCourse(course)">
-                    <v-list-item-content>
-                      <v-list-item-title>{{ course.name }}</v-list-item-title>
-                      <v-list-item-subtitle>{{ course.department }} - {{ course.credits }} 学分</v-list-item-subtitle>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list-item-group>
-              </v-list>
-            </v-card-text>
-          </v-card>
-        </v-tabs-items>
+          <v-tabs-items v-model="activeTab">
+            <v-card flat>
+              <v-card-text>
+                <v-list>
+                  <v-list-item-group>
+                    <v-list-item v-for="course in filteredCourses" :key="course.id"
+                      :class="{ 'selected-item': selectedCourse && selectedCourse.id === course.id }" outlined
+                      @click="selectCourse(course)">
+                      <v-list-item-content>
+                        <v-list-item-title>{{ course.name }}</v-list-item-title>
+                        <v-list-item-subtitle>{{ course.department }} - {{ course.credits }} 学分</v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-list-item-group>
+                </v-list>
+              </v-card-text>
+            </v-card>
+          </v-tabs-items>
+        </template>
       
-      </v-col>
-    </v-row>
-    <v-row v-if="selectedCourse">
-      <v-col>
-        <CourseDetail :course="selectedCourse" @add-review="addReview" />
+        <!-- 选择了课程后，显示课程详情 -->
+        <v-row v-if="selectedCourse">
+          <v-col>
+            <CourseDetail :course="selectedCourse" @add-review="addReview" @back="clearSelection" />
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </v-container>
 </template>
+
 
 <script>
 import CourseDetail from './CourseDetail.vue';
@@ -66,9 +68,9 @@ export default {
           category: '专业课',
           department: '计算机科学与技术学院',
           reviews: [
-            [5,"Engaging discussions on the intricacies of human behavior enhance understanding."],
-            [3,"Overlapping content in lectures and readings can lead to redundancy."],
-            [4,"Practical applications of psychological theories enrich the learning experience."]
+            [5, "Engaging discussions on the intricacies of human behavior enhance understanding."],
+            [3, "Overlapping content in lectures and readings can lead to redundancy."],
+            [4, "Practical applications of psychological theories enrich the learning experience."]
           ]
         },
       ],
@@ -92,9 +94,11 @@ export default {
     },
 
     selectCourse(course) {
-      console.log("Click detected, course:", course); // 检查点击是否触发
       this.selectedCourse = course;
-      console.log("Selected course set:", this.selectedCourse); // 确认selectedCourse被正确设置
+    },
+
+    clearSelection() {
+      this.selectedCourse = null;
     },
 
     addReview(courseId, review) {
@@ -119,6 +123,7 @@ export default {
   }
 };
 </script>
+
 
 
 
