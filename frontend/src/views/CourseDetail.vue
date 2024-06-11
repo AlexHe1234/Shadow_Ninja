@@ -1,10 +1,20 @@
 <template>
   <v-card>
     <v-card-title>
-      <span class="headline">{{ course.name }}</span>
+      <v-row class="align-center">
+        <!-- 返回按钮的列 -->
+        <v-col cols="auto">
+          <v-btn icon @click="$emit('back')">
+            <v-icon>mdi-arrow-left</v-icon>
+          </v-btn>
+        </v-col>
+        <!-- 课程名称的列，使用居中对齐 -->
+        <v-col class="d-flex justify-center text-center">
+          <span class="headline" style="margin-left: -4.0rem;">{{ course.name }}</span>
+        </v-col>
+      </v-row>
     </v-card-title>
     <v-card-text>
-      
       <!-- 课程信息 -->
       <v-subheader>【基本信息】</v-subheader>
       <p>课程代码: {{ course.code }}</p>
@@ -18,12 +28,12 @@
       <br>
 
       <!-- 新增展示所有评论的部分 -->
-      <v-subheader> 【所有评论】</v-subheader>
+      <v-subheader>【所有评论】</v-subheader>
       <v-list dense>
         <v-list-item v-for="(review, index) in course.reviews" :key="index">
           <v-list-item-content>
             <v-list-item-title>{{ '# Review Record # ' + (index + 1) }}</v-list-item-title>
-            <v-list-item-subtitle>{{ review }}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{ review[1] }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -32,8 +42,7 @@
 
       <br>
 
-      
-      <v-subheader> 【评论AI总结】 </v-subheader>
+      <v-subheader>【评论AI总结】</v-subheader>
       <br>
       <!-- AI评论总结按钮 -->
       <v-btn @click="fetchCourseReviewSummary">点击查看最新总结</v-btn>
@@ -45,17 +54,10 @@
         auto-grow
       ></v-textarea>
       <v-divider></v-divider>
-      
-      <v-list>
-        <v-list-item v-for="(review, index) in course.reviews" :key="index">
-          <v-list-item-content>
-            <v-list-item-title>评分: {{ review.rating }} / 5</v-list-item-title>
-            <v-list-item-subtitle>{{ review.comment }}</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-      <v-divider></v-divider>
-      
+
+      <br>
+
+      <v-subheader>【添加评论】</v-subheader>
       <v-text-field v-model="newComment" label="输入评价" outlined></v-text-field>
       <v-rating v-model="newRating" max="5" half-increments></v-rating>
       <v-btn color="primary" @click="submitReview">提交</v-btn>
@@ -78,7 +80,6 @@ export default {
   },
   methods: {
     fetchCourseReviewSummary() {
-
       // 暂时替代
       this.reviewSummary = 'THIS IS THE SUMMARY OF THE REVIEWS TO THIS COURSE.';
 
@@ -107,7 +108,6 @@ export default {
       }
     }
   },
-  // 新增：计算属性，用于计算课程的平均评分
   computed: {
     averageRating() {
       if (!this.course.reviews || this.course.reviews.length === 0) {
@@ -116,13 +116,6 @@ export default {
       const totalRating = this.course.reviews.reduce((sum, review) => sum + review[0], 0);
       return totalRating / this.course.reviews.length;
     }
-  },
-  data() {
-    return {
-      newComment: '',
-      newRating: 0,
-      reviewSummary: ''
-    };
-  },
+  }
 };
 </script>
