@@ -60,11 +60,13 @@
       ></v-textarea>
       <v-divider></v-divider>
       <br>
-     </div>
+     </div >
+     <div style="font-weight: bold;font-size: 20px;">
       <v-subheader style="font-weight: bold;font-size: 20px;">【添加评论】</v-subheader>
       <v-text-field v-model="newComment" label="输入评价" outlined></v-text-field>
       <v-rating v-model="newRating" max="5" half-increments></v-rating>
       <v-btn color="primary" @click="submitReview">提交</v-btn>
+    </div>
     </v-card-text>
   </v-card>
 </template>
