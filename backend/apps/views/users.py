@@ -4,6 +4,9 @@ from apps import db
 from apps.orm import *
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from .llm import lm
+from sqlalchemy.orm import Session
+from .safe import is_inappropriate
+
 
 user_blue = Blueprint('users', __name__, url_prefix='/user')
 
@@ -26,15 +29,49 @@ def recommend(req):
     # print(rt)
     return rt
 
+def get_comments_by_course_id(course_id):
+    with Session(db.engine) as session:
+        comments = session.query(Comment.content) \
+                          .filter(Comment.c_id == course_id) \
+                          .all()
+    return [comment.content for comment in comments]
+
+def _get_summary(course_id):
+    cmt = get_comments_by_course_id(course_id)
+    cc = ''
+    for cm in cmt:
+        cc += cm
+    # print(cmt)
+    rt = lm.forward_text(user_msg=f'这是一门课程的评论内容，请总结评论生成一段中文概括课程的情况，注意回答中不要有英语：' + cc,
+                         system_msg='用中文回答一切问题')
+    return rt
+
+def is_content_safe(comment: str):
+    return not is_inappropriate(comment)
+
 def _add_course_comment(course_name, content, rating):  
-    course = Course.query.filter_by(c_name=course_name).first()
-    if course:
+    if is_content_safe(content):
+        course = Course.query.filter_by(c_id=course_name).first()
         new_comment = Comment(c_id=course.c_id, content=content, rating=rating)
         db.session.add(new_comment)
         db.session.commit()
         return True
     else:
         return False
+    
+@user_blue.route('/add_course_comment', methods=['POST']) # 登录路由，向 /user/login 发送请求则会被此函数捕获
+def add_course_comment():
+    reqData = request.get_json() # 获取请求数据
+    ret = _add_course_comment(reqData['course'], reqData['review'], reqData['rating'])
+    print(reqData)
+    dict0 = {}
+    if ret == True:
+        dict0["status"] = 0
+    else:
+        dict0["status"] = 1
+    dict0["resp"] = "Add course comment success!"
+    # dict0["token"] = user_token
+    return make_response(dict0, 200)
     
 def _add_teacher_comment(t_name, content, rating):
     new_comment = TeacherComment(t_name=t_name, content=content, rating=rating)
@@ -83,7 +120,16 @@ def get_recommend():
 @user_blue.route('/get_course', methods=['POST'])
 # @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
 def get_course():
-    print('hi')
+    # print('hi')
     dict0 = _get_course_and_comments()
     print(dict0)
+    return make_response(dict0, 200)
+
+@user_blue.route('/get_summary', methods=['POST'])
+# @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
+def get_summary():
+    # print('hi')
+    reqData = request.get_json() # 获取请求数据
+    res = _get_summary(reqData['course_name'])
+    dict0 = {'summary': res}
     return make_response(dict0, 200)
