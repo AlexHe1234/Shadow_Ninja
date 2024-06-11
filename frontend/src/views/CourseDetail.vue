@@ -32,8 +32,8 @@
       <v-list dense>
         <v-list-item v-for="(review, index) in course.reviews" :key="index">
           <v-list-item-content>
-            <v-list-item-title>{{ '# Review Record # ' + (index + 1) }}</v-list-item-title>
-            <v-list-item-subtitle>{{ review[1] }}</v-list-item-subtitle>
+            <v-list-item-title>{{ '匿名评论 ' + (index + 1) }}</v-list-item-title>
+            <v-list-item><strong>{{ review[1] }}</strong></v-list-item>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -66,6 +66,8 @@
 </template>
 
 <script>
+import { getapi, postapi } from "../utils/http.js";
+
 export default {
   name: 'CourseDetail',
   props: {
@@ -81,7 +83,19 @@ export default {
   methods: {
     fetchCourseReviewSummary() {
       // 暂时替代
-      this.reviewSummary = 'THIS IS THE SUMMARY OF THE REVIEWS TO THIS COURSE.';
+
+      postapi('/api/user/get_summary', {course_name: this.course.id})
+      .then(response => {
+        // console.log(response)
+        this.reviewSummary = response.data.summary;
+      })
+      .catch(error => {
+        this.reviewSummary = 'Backend error.';
+
+      // console.log('error');
+      });
+
+      // this.reviewSummary = 'THIS IS THE SUMMARY OF THE REVIEWS TO THIS COURSE.';
 
       // 从后端API请求数据(暂时不可用)
       // fetch('http://localhost:5000/api/course/' + this.course.id + '/reviews')
@@ -90,7 +104,7 @@ export default {
       //     this.reviewSummary = data.summary;
       //   });
 
-      return this.reviewSummary;
+      // return this.reviewSummary;
         //call openai api to analyse the reviews in this.course.reviews
         //return the summary of the reviews
     },
