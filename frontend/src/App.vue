@@ -3,6 +3,12 @@
     <nav>
       <div class="card-container">
         <div class="card">
+          <router-link to="/abc">
+            <div class="card-content">返回</div>
+          </router-link>
+        </div>
+
+        <div class="card">
           <router-link to="/">
             <div class="card-content">首页</div>
           </router-link>

@@ -48,6 +48,7 @@
 
 <script>
 import CourseDetail from './CourseDetail.vue';
+import { getapi, postapi } from "../utils/http.js";
 
 export default {
   name: 'CourseEvaluation',
@@ -59,27 +60,40 @@ export default {
       activeTab: 0,
       searchTerm: '',
       categories: ['专业课', '通识必修课程', '体育课程', '跨类(专业)', '专业基础课程', '认定型课程', '国际化课程', '实验课程', '荣誉课程'],
-      courses: [
-        {
-          id: 1,
-          code: '2110721',
-          name: '工程实践',
-          credits: '3.0',
-          category: '专业课',
-          department: '计算机科学与技术学院',
-          reviews: [
-            [5, "Engaging discussions on the intricacies of human behavior enhance understanding."],
-            [3, "Overlapping content in lectures and readings can lead to redundancy."],
-            [4, "Practical applications of psychological theories enrich the learning experience."]
-          ]
-        },
-      ],
+      courses: [],
       filteredCourses: [],
       selectedCourse: null
     };
   },
   methods: {
+    initialize () {
+      console.log('hikasjhdfkjn');
+      // this.courses = [
+      //   {
+      //     id: 1,
+      //     code: '2110721',
+      //     name: '工程实践',
+      //     credits: '3.0',
+      //     category: '专业课',
+      //     department: '计算机科学与技术学院',
+      //     reviews: [
+      //       [5, "Engaging discussions on the intricacies of human behavior enhance understanding."],
+      //       [3, "Overlapping content in lectures and readings can lead to redundancy."],
+      //       [4, "Practical applications of psychological theories enrich the learning experience."]
+      //     ]
+      //   },
+      // ]
+      postapi('/api/user/get_course', {})
+      .then( (response) => {
+          this.courses = response.data
+      })
+      .catch(error => {
+          // this.result = '';
+      // console.log('error');
+      });
+    },
     searchCourses() {
+      // console.log('hello')
       this.filteredCourses = [];
       if (this.searchTerm) {
         this.filteredCourses = this.courses.filter(course =>
@@ -111,7 +125,10 @@ export default {
     }
   },
   mounted() {
+    this.initialize()
+
     this.searchCourses();
+    // console.log("hihi")
   },
   watch: {
     activeTab() {
@@ -120,8 +137,12 @@ export default {
     searchTerm() {
       this.searchCourses();
     }
-  }
+  },
+
 };
+
+
+
 </script>
 
 

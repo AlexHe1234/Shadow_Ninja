@@ -23,7 +23,7 @@ def recommend(req):
         cc_s += 'Course: ' + pair[0] + ' Comment: ' + pair[1]
     rt = lm.forward_text(user_msg=f'这是一些课程的名字和评论，请根据他们和需求推荐一门课，用全中文回答，英文评论也翻译成中文，不要出现英语字母。这是需求： {req}。 这是课程名与评论：' + cc_s,
                          system_msg='请用中文回答.')
-    print(rt)
+    # print(rt)
     return rt
 
 def _add_course_comment(course_name, content, rating):  
@@ -80,8 +80,10 @@ def get_recommend():
     dic = {'result': result}
     return make_response(dic, 200)
 
-@user_blue.route('/get_course', methods=['GET'])
-@jwt_required() # 需要请求携带 jwt ，即表明已登录状态
+@user_blue.route('/get_course', methods=['POST'])
+# @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
 def get_course():
+    print('hi')
     dict0 = _get_course_and_comments()
+    print(dict0)
     return make_response(dict0, 200)
