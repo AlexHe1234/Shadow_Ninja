@@ -16,20 +16,22 @@
     </v-card-title>
     <v-card-text>
       <!-- 课程信息 -->
-      <v-subheader>【基本信息】</v-subheader>
-      <p>课程代码: {{ course.code }}</p>
-      <p>学分: {{ course.credits }}</p>
-      <p>所属学院: {{ course.department }}</p>
-      <p v-if="averageRating !== undefined">平均评分: {{ averageRating.toFixed(1) }} / 5.0</p>
-      <p v-else>评分: 暂无</p>
+      <div style="background: linear-gradient(to left, #cce5ff, #edc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */; padding: 10px;">
+        <v-subheader style="font-size: 20px; font-weight: bold;">【基本信息】</v-subheader>
+        <p>课程代码: {{ course.code }}</p>
+        <p>学分: {{ course.credits }}</p>
+        <p>所属学院: {{ course.department }}</p>
+        <p v-if="averageRating !== undefined">平均评分: {{ averageRating.toFixed(1) }} / 5.0</p>
+        <p v-else>评分: 暂无</p>
+      </div>
       <br>
       <v-divider></v-divider>
 
       <br>
 
       <!-- 新增展示所有评论的部分 -->
-      <v-subheader>【所有评论】</v-subheader>
-      <v-list dense>
+      <v-subheader style="font-weight: bold;font-size: 20px;">【所有评论】</v-subheader>
+      <v-list dense style="background: linear-gradient(to right, #E9E4F0, #D3CCE3); ">
         <v-list-item v-for="(review, index) in course.reviews" :key="index">
           <v-list-item-content>
             <v-list-item-title>{{ '匿名评论 ' + (index + 1) }}</v-list-item-title>
@@ -39,10 +41,13 @@
       </v-list>
       <br>
       <v-divider></v-divider>
+      <br>
+
+        <div style="background: linear-gradient(to right, #cce5ff, #edc3c7);">
 
       <br>
 
-      <v-subheader>【评论AI总结】</v-subheader>
+      <v-subheader style="font-weight: bold;font-size: 20px;">【评论AI总结】</v-subheader>
       <br>
       <!-- AI评论总结按钮 -->
       <v-btn @click="fetchCourseReviewSummary">点击查看最新总结</v-btn>
@@ -54,10 +59,9 @@
         auto-grow
       ></v-textarea>
       <v-divider></v-divider>
-
       <br>
-
-      <v-subheader>【添加评论】</v-subheader>
+     </div>
+      <v-subheader style="font-weight: bold;font-size: 20px;">【添加评论】</v-subheader>
       <v-text-field v-model="newComment" label="输入评价" outlined></v-text-field>
       <v-rating v-model="newRating" max="5" half-increments></v-rating>
       <v-btn color="primary" @click="submitReview">提交</v-btn>
