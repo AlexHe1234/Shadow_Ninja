@@ -11,7 +11,7 @@ class BaseConfig(object):
     PORT = "3306"
     USERNAME = "root"
     PASSWORD = "ufo-62418676" # TODO
-    DBNAME = '' # TODO
+    DBNAME = 'sc' # TODO
 
     SQLALCHEMY_DATABASE_URI = f"{DIALCT}+{DRITVER}://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?charset=utf8"
     SQLALCHEMY_TRACK_MODIFICATIONS = False

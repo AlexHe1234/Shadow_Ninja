@@ -1,5 +1,5 @@
 <template>
-    <h1 class="centered-title">智能教师评价系统</h1>
+    <!-- <h1 class="centered-title">智能教师评价系统</h1> -->
     <SearchBar @search="handleSearch" />
     <TeacherList
       :teachers="filteredTeachers"

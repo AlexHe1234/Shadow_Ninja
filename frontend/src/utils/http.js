@@ -31,8 +31,8 @@ instace.interceptors.response.use(
   (err) => {
     console.log(err)
     if (err.response.status == 401) {
-      alert('登录信息过期')
-      store.commit('logout')
+      // alert('登录信息过期')
+      // store.commit('logout')
     }
     return Promise.reject(err); //将错误消息挂到promise的失败函数上
   }

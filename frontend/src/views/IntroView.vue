@@ -17,7 +17,7 @@
                 智能课程评价系统
               </h2>
               <div class="blank-block-1"></div>
-              <div class="text-h5 font-weight-medium mb-2" :style="{ color: `rgb(163, 177, 138)` }">
+              <div class="text-h5 font-weight-mediums mb-2" :style="{ color: `rgb(163, 177, 138)` }">
                 欢迎，何同学
               </div>
 

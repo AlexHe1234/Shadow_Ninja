@@ -11,7 +11,7 @@
           <option v-for="n in 5" :key="n" :value="n">{{ n }}</option>
         </select>
         <br>
-        <button @click="submitReview">提交</button>
+        <button @click="submitReview(teacher.name)">提交</button>
         <button @click="$emit('back')">返回</button>
       </div>
     </div>
@@ -35,38 +35,31 @@
       }
     },
     methods: {
-      // submitReview() {
-      //   if (this.review && this.rating) {
-      //     this.teacher.reviews.push(this.review);
-      //     this.teacher.ratings.push(parseInt(this.rating));
-      //     this.review = '';
-      //     this.rating = '';
-      //     alert('评价提交成功');
-      //   } else {
-      //     alert('请填写完整的评价和评分');
-      //   }
-      // }
+      submitReview(teacher_name) {
+        if (this.review && this.rating) {
+          // console.log(this.selectedTeacher);
+          // console.log('hi');
+          const data = {
+            teacher: teacher_name,
+            review: this.review,
+            rating: this.rating
+          };
 
-   submitReview() {
-      if (this.review && this.rating) {
-        // Make a GET request to the backend to get user information
-        getapi('/api/user/getUserInfo')
-          .then(response => {
-            // Update the teacher object with the new review and rating
-            this.teacher.reviews.push(this.review);
-            this.teacher.ratings.push(parseInt(this.rating));
-            this.review = '';
-            this.rating = '';
-            alert('评价提交成功');
-          })
-          .catch(error => {
-            console.error('Error submitting review:', error);
-            alert('提交评价时出现错误');
-          });
-      } else {
-        alert('请填写完整的评价和评分');
+          postapi('/api/user/add_teacher_comment', data)
+            .then(response => {
+              // console.log(response.data);
+              this.review = '';
+              this.rating = '';
+              alert('评价提交成功');
+            })
+            .catch(error => {
+              console.log(error);
+              alert('提交评价时出现错误');
+            });
+        } else {
+          alert('请填写完整的评价和评分');
+        }
       }
-    }
 
     }
   };
