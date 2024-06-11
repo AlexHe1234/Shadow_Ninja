@@ -4,7 +4,7 @@ from __init__ import foundation_model  # 引入全局对象 foundation_model
 import re
 
 # 假设评论数据文件的路径
-COMMENTS_FILE = 'D:\\Documents\\SE-Smart-Comment-Sys-main\\backend\\lib\\data\\Gen\\comment.json'
+COMMENTS_FILE = 'D:\\Documents\\SE-Smart-Comment-Sys-main\\backend\\lib\\data\\Gen\\extreme_comments.json'
 REMOVED_COMMENTS_FILE = 'D:\\Documents\\SE-Smart-Comment-Sys-main\\backend\\lib\\data\\Gen\\removed_comments.json'
 
 # 内容政策示例
@@ -87,7 +87,7 @@ def moderate_comments(courses: List[Dict]) -> (List[Dict], List[Dict]):
     removed_comments = []
 
     for course in courses:
-        filtered_comments = {'positive': [], 'negative': []}
+        filtered_comments = {'extreme' : []}
 
         for comment in course['comments']:
             for comment_type, content in comment.items():
