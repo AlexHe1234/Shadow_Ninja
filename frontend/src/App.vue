@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div class="top-left-logo">
-      <img src="./assets/logo.jpg" alt="Logo" class="logo-image"></img>
+      <img src="./assets/logo_new.jpg" alt="Logo" class="logo-image"></img>
     </div>
-    <div class="top-left-title">教育信息管理系统</div>
+    <!-- <div class="top-left-title">教育信息管理系统</div> -->
     <!-- Rest of the template -->
     <nav>
       <div class="card-container">
@@ -80,15 +80,15 @@ router-link-active {
 <style scoped>
 .top-left-logo {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 50px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the height as needed */
+  top: -69px;
+  left: 20px;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
 }
 
 .logo-image {
-  width: 100%;
-  height: 100%;
+  width: 230%;
+  height: 230%;
   object-fit: contain;
 }
 
