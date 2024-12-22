@@ -43,11 +43,14 @@
       <v-divider></v-divider>
       <br>
 
-        <div style="background: linear-gradient(to right, #cce5ff, #edc3c7);">
+      <!-- <div style="background: linear-gradient(to right, #cce5ff, #edc3c7);"> -->
 
       <br>
+      <!-- <br> -->
+      <!-- <br> -->
 
       <v-subheader style="font-weight: bold;font-size: 20px;">【评论AI总结】</v-subheader>
+      <br>
       <br>
       <!-- AI评论总结按钮 -->
       <v-btn @click="fetchCourseReviewSummary">点击查看最新总结</v-btn>
@@ -60,13 +63,14 @@
       ></v-textarea>
       <v-divider></v-divider>
       <br>
-     </div >
-     <div style="font-weight: bold;font-size: 20px;">
+     <!-- </div > -->
+     <br>
+  
       <v-subheader style="font-weight: bold;font-size: 20px;">【添加评论】</v-subheader>
-      <v-text-field v-model="newComment" label="输入评价" outlined></v-text-field>
+      <v-text-field   style="font-weight: bold;font-size: 20px;" v-model="newComment" label="输入评价" outlined></v-text-field>
       <v-rating v-model="newRating" max="5" half-increments></v-rating>
       <v-btn color="primary" @click="submitReview">提交</v-btn>
-    </div>
+  
     </v-card-text>
   </v-card>
 </template>
