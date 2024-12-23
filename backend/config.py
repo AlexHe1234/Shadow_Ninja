@@ -1,7 +1,7 @@
 import datetime
 # 配置类基类
 class BaseConfig(object):
-    JWT_SECRET_KEY = "5682"
+    JWT_SECRET_KEY = "4921"
     JWT_ACCESS_TOKEN_EXPIRES = datetime.timedelta(minutes=60)
 
     # 数据库配置
@@ -11,7 +11,7 @@ class BaseConfig(object):
     PORT = "3306"
     USERNAME = "root"
     PASSWORD = "ufo-62418676" # TODO
-    DBNAME = 'sc' # TODO
+    DBNAME = 'shopsmart' # TODO
 
     SQLALCHEMY_DATABASE_URI = f"{DIALCT}+{DRITVER}://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?charset=utf8"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -27,3 +27,4 @@ class ProductionConfig(BaseConfig):
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
     TESTING = False
+    
