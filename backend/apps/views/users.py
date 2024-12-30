@@ -142,7 +142,6 @@ def search():
     
     else:
         respond = engine_instance.search(query)
-        # respond = fake_results
 
         for row in respond['results']:
             new_row = Cache(
