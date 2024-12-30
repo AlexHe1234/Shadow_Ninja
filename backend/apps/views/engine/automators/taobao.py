@@ -9,6 +9,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+
 import time
 from pyquery import PyQuery as pq
 from datetime import datetime
@@ -44,7 +46,13 @@ class SearchTaobao(Search):
     def initialize(self):
         if hasattr(self, 'driver'):
             self.driver.quit()
-        self.driver = webdriver.Chrome()
+        
+        chrome_options = Options()
+        # chrome_options.add_argument('--headless')  # Run in headless mode (no GUI)
+        chrome_options.add_argument('--no-sandbox')  # Disable sandbox (important for Docker)
+        chrome_options.add_argument('--disable-dev-shm-usage')  # Overcome limited shared memory
+
+        self.driver = webdriver.Chrome(options=chrome_options)
         
         self.driver.get(self.root_url)
         self.load_cookies('.taobao.com')

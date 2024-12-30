@@ -65,8 +65,9 @@ class Notification:
             return
         
         print(f'og price: {self.price}; current price {float(price)}')
-        # if float(price) < self.price:
-        if True:
+    
+        if float(price) < self.price:
+        # if True:
             self.notify()
     
     def quit(self):

@@ -1,5 +1,5 @@
 import jieba
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 import numpy as np
 from typing import List, Dict
 from sklearn.metrics.pairwise import cosine_similarity

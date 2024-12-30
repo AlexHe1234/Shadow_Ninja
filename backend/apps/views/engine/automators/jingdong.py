@@ -12,6 +12,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
+
 import time
 from datetime import datetime
 from pyquery import PyQuery as pq
@@ -52,10 +53,12 @@ class SearchJingDong(Search):
         
         options = Options()
         options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36")
-        options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option("useAutomationExtension", False)
-        # options.add_experimental_option("detach", True)
+        # options.add_argument("--disable-blink-features=AutomationControlled")
+        # options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        # options.add_experimental_option("useAutomationExtension", False)
+        
+        options.add_argument('--no-sandbox')  # Disable sandbox (important for Docker)
+        options.add_argument('--disable-dev-shm-usage')  # Overcome limited shared memory
         
         self.driver = webdriver.Chrome(options=options)
         
@@ -67,7 +70,11 @@ class SearchJingDong(Search):
             """
         })
         
-        self.driver.get(self.root_url)
+        try:
+            self.driver.get(self.root_url)
+        except:
+            self.flag = False
+            
         self.load_cookies('jd.com')
         
         self.logged_in = False
@@ -77,7 +84,7 @@ class SearchJingDong(Search):
         
     @property
     def available(self):
-        return self.logged_in
+        return self.logged_in and self.flag
     
     def quit_search(self):
         self.save_cookies()

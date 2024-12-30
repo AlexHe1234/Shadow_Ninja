@@ -52,7 +52,9 @@ class SearchSuNing(Search):
         options.add_argument("--disable-blink-features=AutomationControlled")
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
         options.add_experimental_option("useAutomationExtension", False)
-        # options.add_experimental_option("detach", True)
+        
+        options.add_argument('--no-sandbox')  # Disable sandbox (important for Docker)
+        options.add_argument('--disable-dev-shm-usage')  # Overcome limited shared memory
         
         self.driver = webdriver.Chrome(options=options)
         

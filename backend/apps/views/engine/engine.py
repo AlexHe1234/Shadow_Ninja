@@ -29,16 +29,22 @@ class SearchEngine:
             
             # add auto matching for platforms by enforcing "name" field for every platform class
             if pf == 'tb':
-                self.platforms.append(SearchTaobao(num_result=init_num_result))
-                print(f'Added platform {self.platforms[-1].pf}')
+                pf_obj = SearchTaobao(num_result=init_num_result)
+                if pf_obj.available:
+                    self.platforms.append(pf_obj)
+                    print(f'Added platform {self.platforms[-1].pf}')
             
             if pf == 'jd':
-                self.platforms.append(SearchJingDong(num_result=init_num_result))
-                print(f'Added platform {self.platforms[-1].pf}')
+                pf_obj = SearchJingDong(num_result=init_num_result)
+                if pf_obj.available:
+                    self.platforms.append(pf_obj)
+                    print(f'Added platform {self.platforms[-1].pf}')
                 
             if pf == 'sn':
-                self.platforms.append(SearchSuNing(num_result=init_num_result))
-                print(f'Added platform {self.platforms[-1].pf}')
+                pf_obj = SearchSuNing(num_result=init_num_result)
+                if pf_obj.available:
+                    self.platforms.append(pf_obj)
+                    print(f'Added platform {self.platforms[-1].pf}')
         
         print('Engine is ready')
         
