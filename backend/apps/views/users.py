@@ -4,6 +4,8 @@ from apps import db
 from apps.orm import *
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from sqlalchemy.orm import Session
+from .fake_data import fake_results
+from .engine import engine_instance
 
 
 user_blue = Blueprint('users', __name__, url_prefix='/user')
@@ -14,74 +16,6 @@ def safe_access(data, key, default):
     if key not in data.keys(): return default
     else: return data[key]
 
-    
-# @user_blue.route('/add_course_comment', methods=['POST']) # 登录路由，向 /user/login 发送请求则会被此函数捕获
-# def add_course_comment():
-#     reqData = request.get_json() # 获取请求数据
-#     ret = _add_course_comment(reqData['course'], reqData['review'], reqData['rating'])
-#     print(reqData)
-#     dict0 = {}
-#     if ret == True:
-#         dict0["status"] = 0
-#     else:
-#         dict0["status"] = 1
-#     dict0["resp"] = "Add course comment success!"
-#     # dict0["token"] = user_token
-#     return make_response(dict0, 200)
-
-
-# @user_blue.route('/add_teacher_comment', methods=['POST']) # 登录路由，向 /user/login 发送请求则会被此函数捕获
-# def add_teacher_comment():
-    
-#     reqData = request.get_json() # 获取请求数据
-#     print(reqData)
-    
-#     _add_teacher_comment(reqData['teacher'], reqData['review'], reqData['rating'])
-#     dict0 = {}
-#     dict0["status"] = 0
-#     dict0["resp"] = "Add teacher comment success!"
-#     # dict0["token"] = user_token
-#     return make_response(dict0, 200)
-
-
-# @user_blue.route('/get_recommend', methods=['POST'])
-# def get_recommend():
-#     reqData = request.get_json() # 获取请求数据
-#     req = reqData['req']
-#     # print('!!!!!!',req)
-#     result = recommend(req)
-#     dic = {'result': result}
-#     return make_response(dic, 200)
-
-
-# @user_blue.route('/get_course', methods=['POST'])
-# # @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
-# def get_course():
-#     # print('hi')
-#     dict0 = _get_course_and_comments()
-#     print(dict0)
-#     return make_response(dict0, 200)
-
-
-# @user_blue.route('/get_summary', methods=['POST'])
-# # @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
-# def get_summary():
-#     # print('hi')
-#     reqData = request.get_json() # 获取请求数据
-#     res = _get_summary(reqData['course_name'])
-#     dict0 = {'summary': res}
-#     return make_response(dict0, 200)
-
-
-# @user_blue.route('/get_teacher', methods=['POST'])
-# # @jwt_required() # 需要请求携带 jwt ，即表明已登录状态
-# def get_teacher():
-#     # print('hi')
-#     # reqData = request.get_json() # 获取请求数据
-#     # res = _get_summary(reqData['course_name'])
-#     res = _get_teacher()
-#     dict0 = {'teacher': res}
-#     return make_response(dict0, 200)
 
 @user_blue.route('/register', methods=['POST'])
 def register():
@@ -125,10 +59,10 @@ def login_email():
     
     user = User.query.filter_by(email=email, password=password)
     
-    print('found', user.count())
+    print('found', user.count(), user.first().username)
     
     if user.count() > 0:
-        return make_response({'proceed': True}, 200)
+        return make_response({'proceed': True, 'user': user.first().username}, 200)
     else:
         return make_response({'proceed': False}, 200)
 
@@ -142,9 +76,88 @@ def login_username():
     password = data['password']
     
     user = User.query.filter_by(username=username, password=password)
+    # breakpoint()
     print('found', user.count())
     
     if user.count() > 0:
-        return make_response({'proceed': True}, 200)
+        return make_response({'proceed': True, 'email': user.first().email}, 200)
     else:
         return make_response({'proceed': False}, 200)
+    
+    
+@user_blue.route('/subscribe', methods=['POST'])
+def subsribe():
+    print('subscribe')
+    
+    data = request.get_json()
+    
+    user = data['username']
+    email = data['email']
+    link = data['link']
+    price = data['price']
+    platform = data['platform']
+    
+    if not isinstance(price, str):
+        print(f'price is not a string but rather {price}, setting it to a large number')
+        price = '1000000'
+    
+    try:
+        price = float(price)
+    except:
+        print(f'price cannot be converted to float [price: {price}], setting it to a large number')
+        price = 1e6
+        
+    print(price, link, email, platform)
+    
+    ret = engine_instance.subscribe(price, link, user, email, platform)
+    
+    return make_response({'success': ret}, 200)
+
+
+@user_blue.route('/search', methods=['POST'])
+def search():
+    print('search')
+    data = request.get_json()
+    query = data['query']  # query string
+    
+    # first see if in database
+    cache = Cache.query.filter_by(search_name=query)
+    
+    if cache.count() > 0:
+        respond = {'results': []}
+        
+        for row in cache:
+            tmp = {
+                'name': row.name,
+                'class': row.class_,
+                'size': Cache.to_list(row.size),
+                'image': row.image,
+                'link': row.link,
+                'price': row.price,
+                'history_price': Cache.to_pts_list(row.history_price),
+                'platform': row.platform,
+            }
+
+            respond['results'].append(tmp)
+    
+    else:
+        respond = engine_instance.search(query)
+        # respond = fake_results
+
+        for row in respond['results']:
+            new_row = Cache(
+                search_name=query,
+                name=row['name'],
+                class_=row['class'],
+                size=Cache.to_str(row['size']),
+                image=row['image'],
+                link=row['link'],
+                platform=row['platform'],
+                price=row['price'],
+                history_price=Cache.to_str(row['history_price']),
+            )
+            db.session.add(new_row)
+            db.session.commit()
+            print("Row added successfully.")
+    
+    return make_response(respond, 200)

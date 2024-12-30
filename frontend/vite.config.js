@@ -32,9 +32,17 @@ export default defineConfig({
     proxy: {
       '/api': {
         // 后台地址
-        target: 'http://127.0.0.1:8000',
+        target: 'http://127.0.0.1:3000',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, ''),
+        timeout: 1000000,
+      },
+      onProxyReq: (proxyReq, req, res) => {
+        console.log('Proxying request to:', proxyReq.path);
+      },
+      onError: (err, req, res) => {
+        console.error('Proxy error:', err);
+        res.status(500).send('Something went wrong with the proxy');
       },
     },
   },

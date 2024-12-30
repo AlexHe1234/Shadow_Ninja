@@ -2,17 +2,17 @@
   <div class="login-page">
     <div class="login-container">
       <div class="login-box">
-        <h2>{{ isRegisterPage ? 'Register' : 'Login to continue' }}</h2>
+        <h2>{{ isRegisterPage ? '新用户注册' : '登陆以继续' }}</h2>
 
         <!-- Login or Register Form -->
         <form @submit.prevent="handleSubmit" novalidate>
 
           <div class="input-group" v-if="!isRegisterPage">
-            <label for="loginInput">{{ isEmailLogin ? 'Email' : 'Username' }}</label>
+            <label for="loginInput">{{ isEmailLogin ? '邮箱' : '用户名' }}</label>
             <input
               type="text"
               v-model="loginInput"
-              :placeholder="isEmailLogin ? 'Enter your email' : 'Enter your username'"
+              :placeholder="isEmailLogin ? '请输入邮箱' : '请输入用户名'"
               required
             />
             <span v-if="errors.username" class="error">{{ errors.username }}</span>
@@ -20,22 +20,22 @@
 
           <!-- Additional fields for registration page -->
           <div class="input-group" v-if="isRegisterPage">
-            <label for="username">Username</label>
+            <label for="username">用户名</label>
             <input
               type="text"
               v-model="username"
-              placeholder="Choose a username"
+              placeholder="请输入用户名"
               required
             />
             <span v-if="errors.username" class="error">{{ errors.username }}</span>
           </div>
 
           <div class="input-group" v-if="isRegisterPage">
-            <label for="email">Email</label>
+            <label for="email">邮箱</label>
             <input
               type="email"
               v-model="email"
-              placeholder="Enter your email"
+              placeholder="请输入邮箱"
               required
             />
             <span v-if="errors.email" class="error">{{ errors.email }}</span>
@@ -43,28 +43,28 @@
 
           <!-- Password Field -->
           <div class="input-group">
-            <label for="password">Password</label>
+            <label for="password">密码</label>
             <input
               type="password"
               v-model="password"
-              placeholder="Enter your password"
+              placeholder="请输入密码"
               required
             />
             <span v-if="errors.password" class="error">{{ errors.password }}</span>
           </div>
 
           <div class="input-group" v-if="isRegisterPage">
-            <label for="confirmPassword">Confirm Password</label>
+            <label for="confirmPassword">确认密码</label>
             <input
               type="password"
               v-model="confirmPassword"
-              placeholder="Confirm your password"
+              placeholder="请再次输入密码"
               required
             />
             <span v-if="errors.confirmPassword" class="error">{{ errors.confirmPassword }}</span>
           </div>
 
-          <button type="submit">{{ isRegisterPage ? 'Register' : 'Login' }}</button>
+          <button type="submit">{{ isRegisterPage ? '注册' : '登陆' }}</button>
         </form>
 
         <!-- Button container for side-by-side links -->
@@ -72,12 +72,12 @@
 
           <!-- Switch to email/username login link -->
           <span v-if="!isRegisterPage" class="link" @click="toggleLoginMethod">
-            Switch to {{ isEmailLogin ? 'Username' : 'Email' }} Login
+            使用{{ isEmailLogin ? '用户名' : '邮箱' }}登陆
           </span>
 
           <!-- Register link or back to login -->
           <span class="link" @click="togglePage">
-            {{ isRegisterPage ? 'Back to Login' : 'Register' }}
+            {{ isRegisterPage ? '返回登陆' : '注册新用户' }}
           </span>
 
         </div>
@@ -153,18 +153,18 @@ export default {
 
       if (this.loginInput.length <= 0 && this.isEmailLogin == false) {
         console.log('username empty')
-        this.errors.username = 'Username is required';
+        this.errors.username = '请输入用户名';
         isValid = false;
       }
 
       if (this.loginInput.length <= 0 && this.isEmailLogin) {
         console.log('email empty')
-        this.errors.username = 'Email is required';
+        this.errors.username = '请输入邮箱';
         isValid = false;
       }
 
       if (this.password.length == 0) {
-        this.errors.password = 'Password is required';
+        this.errors.password = '请输入密码';
         isValid = false;
       }
 
@@ -188,7 +188,7 @@ export default {
 
         if (!response.data.proceed) {
           // wrong combination
-          this.failureMessage = 'Wrong email and/or password';
+          this.failureMessage = '错误的邮箱或密码';
 
           setTimeout(() => {
             this.failureMessage = '';
@@ -196,9 +196,14 @@ export default {
         } else {
           // correct, logged in
 
-          localStorage.setItem('is_login', true);
+          localStorage.setItem('is_login', 'true');
+          localStorage.setItem('email_addr', email);
+
+          console.log('user name is ', response.data.user);
+          localStorage.setItem('user_name', response.data.user)
+
           this.$router.push('/');
-          console.log('logged in!');
+          console.log('is_login set! logged in with email!');
         }
       
       } catch (error) {
@@ -217,16 +222,19 @@ export default {
         console.log(response);
 
         if (!response.data.proceed) {
-          this.failureMessage = 'Wrong username and/or password';
+          this.failureMessage = '错误的用户名或密码';
         
           setTimeout(() => {
             this.failureMessage = '';
           }, 3000);
 
         } else {
-          localStorage.setItem('is_login', true);
+          localStorage.setItem('is_login', 'true');
+          localStorage.setItem('email_addr', response.data.email);
+          localStorage.setItem('user_name', username);
+
           this.$router.push('/');
-          console.log('logged in!');
+          console.log('is_login set! logged in with username!');
 
         }
       } catch (error) {
@@ -248,10 +256,10 @@ export default {
 
       // Validate username
       if (!this.username) {
-        this.errors.username = 'Username is required';
+        this.errors.username = '请输入用户名';
         isValid = false;
       } else if (this.username.length <= 6) {
-        this.errors.username = 'Username must be more than 6 characters';
+        this.errors.username = '用户名必须多于6位';
         isValid = false;
       }
 
@@ -260,18 +268,18 @@ export default {
         this.errors.email = 'Email is required';
         isValid = false;
       } else if (!this.isValidEmail(this.email)) {
-        this.errors.email = 'Invalid email address';
+        this.errors.email = '请输入正确的邮箱地址';
         isValid = false;
       }
 
       // Validate password match
       if (this.password !== this.confirmPassword) {
-        this.errors.confirmPassword = 'Passwords do not match';
+        this.errors.confirmPassword = '密码不一致';
         isValid = false;
       } 
       
       if (this.password.length <= 6) {
-        this.errors.password = 'Password must be more than 6 characters';
+        this.errors.password = '密码必须多于6位';
         isValid = false;
       }
 
@@ -284,7 +292,7 @@ export default {
           isValid = true;
           this.isRegisterPage = false;
 
-          this.successMessage = 'Registration successful!';
+          this.successMessage = '注册成功！';
 
           // Hide the message after 3 seconds
           setTimeout(() => {
@@ -294,10 +302,10 @@ export default {
           console.log('register successful');
         } else if (resp === 1) {
           isValid = false;
-          this.errors.username = 'Username already existed';
+          this.errors.username = '用户名已存在';
         } else if (resp === 2) {
           isValid = false;
-          this.errors.email = 'Email already registered';
+          this.errors.email = '邮箱已被注册';
         }
       }
     },
@@ -457,7 +465,7 @@ button:hover {
   background-color: #4CAF50; /* Green */
   color: white;
   padding: 15px 25px;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 16px;
   font-weight: 500;
   display: flex;

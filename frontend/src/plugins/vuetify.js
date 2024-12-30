@@ -1,11 +1,8 @@
-import { createVuetify } from 'vuetify'
-import 'vuetify/styles'
-import '@mdi/font/css/materialdesignicons.css'
+// src/plugins/vuetify.js
 
-const vuetify = createVuetify({
-  icons: {
-    iconfont: 'mdi',
-  },
-})
+import { createVuetify } from 'vuetify'
+import 'vuetify/styles' // Import Vuetify styles
+
+const vuetify = createVuetify()
 
 export default vuetify

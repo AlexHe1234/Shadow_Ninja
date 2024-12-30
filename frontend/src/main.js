@@ -31,7 +31,7 @@ const app = createApp(App);
 
 // 注册 Vuetify 和其他插件
 app.use(vuetify);
-registerPlugins(app);
+// registerPlugins(app);
 
 // 添加路由和状态管理
 app.use(router);
