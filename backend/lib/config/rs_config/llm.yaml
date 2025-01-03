@@ -1,5 +1,0 @@
-stage1_sys_cmd: Answer only with id numbers, separate by comma
-stage1_usr_cmd: Please take a student's major and a bunch of course id and names and majors, as well as an optional additional request from that student, and return the course ids that you think would best suit the student's enrollment request. Please only reply with course IDs (separate with comma) and provide at least 5 choices. 
-
-stage2_sys_cmd: Answer only with id numbers, separate by comma
-stage2_usr_cmd: Please take a student's major and some course info as well as an additional optional request as input, the course info includes id, name, major and some comments from past student takers. Return a single course id that you think best fit the student. Only reply with course id as one integer.

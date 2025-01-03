@@ -1,2 +1,0 @@
-mode: llm
-rs_config: !config /Users/alexhe/Documents/1Code/SE-Smart-Comment-Sys/backend/lib/config/rs_config/llm.yaml
