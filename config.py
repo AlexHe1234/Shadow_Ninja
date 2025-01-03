@@ -13,7 +13,7 @@ class BaseConfig(object):
     HOST = 'localhost'
     PORT = "3306"
     USERNAME = "root"
-    PASSWORD = "ufo-62418676" # TODO
+    PASSWORD = "********" # TODO
     DBNAME = 'shadow_url' # TODO
 
     SQLALCHEMY_DATABASE_URI = f"{DIALCT}+{DRITVER}://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?charset=utf8"
